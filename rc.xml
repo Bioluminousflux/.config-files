@@ -170,27 +170,27 @@
         <desktop>4</desktop>
       </action>
     </keybind>
-    <keybind key="S-W-percent">
+    <keybind key="S-W-5">
       <action name="SendToDesktop">
         <desktop>5</desktop>
       </action>
     </keybind>
-    <keybind key="S-W-asciicircum">
+    <keybind key="S-W-6">
       <action name="SendToDesktop">
         <desktop>6</desktop>
       </action>
     </keybind>
-    <keybind key="S-W-ampersand">
+    <keybind key="S-W-7">
       <action name="SendToDesktop">
         <desktop>7</desktop>
       </action>
     </keybind>
-    <keybind key="S-W-asterisk">
+    <keybind key="S-W-8">
       <action name="SendToDesktop">
         <desktop>8</desktop>
       </action>
     </keybind>
-    <keybind key="S-W-parenleft">
+    <keybind key="S-W-9">
       <action name="SendToDesktop">
         <desktop>9</desktop>
       </action>
