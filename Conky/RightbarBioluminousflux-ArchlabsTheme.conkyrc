@@ -73,14 +73,6 @@ color1 = '#8FA1B3',
 
 conky.text = [[
 #${image ~/.config/conky/archlabs-white.png -p 100,0 -s 45x45  -f 5}
-#${alignc}S Y S T E M    I N F O
-#${hr}
-#${alignc}$sysname $kernel
-#${alignc}${nodename}
-#Uptime:${alignc}${uptime}
-#UTC:${alignc}${utime %H:%M | %r}
-#Battery: ${alignc}${battery}
-#${hr}
 ${alignc}D I S K
 
 ${goto 60}Used${alignr}Size
@@ -126,21 +118,4 @@ ${offset 30}${color1}${top name 7}${alignr}${color6}${top cpu 7}%
 ${offset 30}${color1}${top name 8}${alignr}${color6}${top cpu 8}%
 ${offset 30}${color1}${top name 9}${alignr}${color6}${top cpu 9}%
 ${offset 30}${color1}${top name 10}${alignr}${color6}${top cpu 10}%
-
-#${alignc}S H O R T C U T    K E Y S
-#${hr}
-#[PrtSc]${alignr}Screenshot
-#[S]${alignr}Launcher
-#[S] + Space${alignr}Menu
-#[S] + Return${alignr}Termite
-#[S] + t${alignr}Terminator
-#[S] + d${alignr}Show Desktop
-#[S] + f${alignr}Text Editor
-#[S] + e${alignr}File Manager
-#[S] + m${alignr}Music Player
-#[S] + w${alignr}Web Browser
-#[S] + v${alignr}Audio Control
-#[S] + s${alignr}Window Switcher
-#[S] + Shift + r${alignr}Reload Configs
-#[S] + x${alignr}Logout
 ]];
