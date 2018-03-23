@@ -1,2 +1,2 @@
-# dotfile
-Various dotfiles
+# dotfiles
+~/.'s
