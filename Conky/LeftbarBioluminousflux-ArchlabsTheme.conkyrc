@@ -63,7 +63,7 @@ own_window_colour = '#2B303B',
 own_window_hints = 'undecorated,below,above,sticky,skip_taskbar,skip_pager',
 own_window_transparent = false,
 own_window_title = 'system_conky',
-own_window_type = 'desktop',
+own_window_type = 'override',
 
 --Colours
 default_color = '#8FA1B3',
