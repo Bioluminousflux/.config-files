@@ -205,18 +205,6 @@
         </finalactions>
       </action>
     </keybind>
-    <keybind key="W-Tab">
-      <action name="NextWindow">
-        <allDesktops>yes</allDesktops>
-        <finalactions>
-          <action name="SendToDesktop">
-            <desktop>1</desktop>
-          </action>
-          <action name="focus"/>
-          <action name="raise"/>
-        </finalactions>
-      </action>
-    </keybind>
     <keybind key="S-W-Left">
       <action name="SendToDesktopLeft"/>
     </keybind>
