@@ -72,6 +72,7 @@ color1 = '#8FA1B3',
 };
 
 conky.text = [[
+#${alignc}S Y S T E M    I N F O
 ${alignc}$sysname $kernel
 ${alignc}${nodename}
 ${hr}
