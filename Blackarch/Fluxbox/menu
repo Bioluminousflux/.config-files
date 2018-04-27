@@ -8,14 +8,12 @@
         [exec] (xterm (fuchsia\)) {xterm -bg black -fg fuchsia}
         [exec] (xterm (aqua\)) {xterm -bg black -fg aqua}
         [exec] (xterm (white\)) {xterm -bg black -fg white}
-        [exec] (urxvt (white\)) {xterm -bg black -fg white}
-        [exec] (termite) {termite}
-        [exec] (terminator) {terminator}
     [end]
+    
+    [exec] (Software) {pamac-manager}
     
     [submenu] (file managers)
         [exec] (thunar) {thunar}
-        [exec] (nautilus) {nautilus}
     [end]
   	
     [submenu] (browsers)
@@ -7280,7 +7278,6 @@
     
     [submenu] (settings)
         [exec] (nitrogen) {nitrogen}
-        [exec] (lxappearance) {lxappearance}
     [end]
 
     
