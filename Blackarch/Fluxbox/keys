@@ -7,7 +7,7 @@
 # click on the desktop to get menus
 OnDesktop Mouse1 :HideMenus
 OnDesktop Mouse2 :WorkspaceMenu
-OnDesktop Mouse3 :RootMenu
+OnDesktop Mouse3 :RootMenu			#Right Click
 
 # scroll on the desktop to change workspaces
 OnDesktop Mouse4 :PrevWorkspace
@@ -67,24 +67,24 @@ Mod1 Shift Tab :PrevWindow {groups} (workspace=[current])
 ###############################################################################
 
 # Task View / OSX Expose
-Mod4 Tab :Exec skippy-xd
+Mod4 Tab :Exec skippy-xd		#(Super)+TAB
 
 # open a terminal (xterm)
-Mod4 Return :Exec xterm         #White
-Mod4 g :Exec xterm -fg green    #Green
-Mod4 r :Exec xterm -fg red      #Red
-Mod4 y :Exec xterm -fg yellow   #Yellow
-Mod4 t :Exec xterm -fg aqua     #Aqua
-Mod4 f :Exec xterm -fg fuchsia  #Fuchsia
+Mod4 Return :Exec xterm         	#(Super)+Enter
+Mod4 g :Exec xterm -fg green         	#(Super)+G    
+Mod4 r :Exec xterm -fg red         	#(Super)+R      
+Mod4 y :Exec xterm -fg yellow           #(Super)+Y
+Mod4 t :Exec xterm -fg aqua         	#(Super)+T     
+Mod4 f :Exec xterm -fg fuchsia         	#(Super)+F  
 
 # Launch Rofi, a program launcher
-Mod4 d :Exec rofi -show run
+Mod4 d :Exec rofi -show run         	#(Super)+D
 
 # Launch Opera, web browser
-mod4 w :Exec opera
+mod4 w :Exec opera         	        #(Super)+W
 
 # Launch Thunar, a lightweight file manager
-mod4 e :Exec thunar
+mod4 e :Exec thunar			#(Super)+E
 
 
 ###############################################################################
@@ -104,19 +104,19 @@ mod4 e :Exec thunar
 121 :Exec amixer sset Master,0 toggle   #(Volume Mute) Key
 
 # current window commands
-Mod4 Q :Close
+Mod4 Q :Close				#(Super)+Q
 115 :Kill 				#(End) Key
-Mod4 F5 :Kill
-Mod4 59 :Minimize
-Mod4 60 :Maximize
-Mod4 61 :Fullscreen
+Mod4 F5 :Kill				#(Super)+F5		
+Mod4 59 :Minimize			#(Super)+(<,)	
+Mod4 60 :Maximize			#(Super)+(>.)	
+Mod4 61 :Fullscreen			#(Super)+(?/)	
 110 :Exec thunar $HOME			#(Home) Key
 
 # open the window menu
-Mod4 space :WindowMenu
+Mod4 space :WindowMenu			#(Super)+Spacebar
 
 # exit fluxbox
-Shift Mod4 Esc :Exit
+Shift Mod4 Esc :Exit			#(Super)+Shift+ESC
 
 
 ###############################################################################
@@ -126,55 +126,55 @@ Shift Mod4 Esc :Exit
 ###############################################################################
 
 # change to previous/next workspace
-Control Mod1 Left :PrevWorkspace
-Control Mod1 Right :NextWorkspace
+Control Mod1 Left :PrevWorkspace	#Control+Alt+Left
+Control Mod1 Right :NextWorkspace	#Control+Alt+Right
 
 # send the current window to previous/next workspace
-Mod4 Left :SendToPrevWorkspace
-Mod4 Right :SendToNextWorkspace
+Mod4 Left :SendToPrevWorkspace		#(Super)+Left
+Mod4 Right :SendToNextWorkspace		#(Super)+Right
 
 # send the current window and follow it to previous/next workspace
-Control Mod4 Left :TakeToPrevWorkspace
-Control Mod4 Right :TakeToNextWorkspace
+Control Mod4 Left :TakeToPrevWorkspace	#(Super)+Control+Left
+Control Mod4 Right :TakeToNextWorkspace	#(Super)+Control+Right
 
 # change to a specific workspace
-Mod4 1 :Workspace 1
-Mod4 2 :Workspace 2
-Mod4 3 :Workspace 3
-Mod4 4 :Workspace 4
-Mod4 5 :Workspace 5
-Mod4 6 :Workspace 6
-Mod4 7 :Workspace 7
-Mod4 8 :Workspace 8
-Mod4 9 :Workspace 9
-Mod4 0 :Workspace 10
-Mod4 20 :Workspace 11
-Mod4 21 :Workspace 12
+Mod4 1 :Workspace 1			#(Super)+1
+Mod4 2 :Workspace 2			#(Super)+2
+Mod4 3 :Workspace 3			#(Super)+3
+Mod4 4 :Workspace 4			#(Super)+4
+Mod4 5 :Workspace 5			#(Super)+5
+Mod4 6 :Workspace 6			#(Super)+6
+Mod4 7 :Workspace 7			#(Super)+7
+Mod4 8 :Workspace 8			#(Super)+8
+Mod4 9 :Workspace 9			#(Super)+9
+Mod4 0 :Workspace 10			#(Super)+0
+Mod4 20 :Workspace 11           	#(Super)+(-_)       
+Mod4 21 :Workspace 12			#(Super)+(+=)
 
 # send the current window to a specific workspace
-Mod4 Shift 1 :SendToWorkspace 1
-Mod4 Shift 2 :SendToWorkspace 2
-Mod4 Shift 3 :SendToWorkspace 3
-Mod4 Shift 4 :SendToWorkspace 4
-Mod4 Shift 5 :SendToWorkspace 5
-Mod4 Shift 6 :SendToWorkspace 6
-Mod4 Shift 7 :SendToWorkspace 7
-Mod4 Shift 8 :SendToWorkspace 8
-Mod4 Shift 9 :SendToWorkspace 9
-Mod4 Shift 0 :SendToWorkspace 10
-Mod4 Shift 20 :SendToWorkspace 11
-Mod4 Shift 21 :SendToWorkspace 12
+Mod4 Shift 1 :SendToWorkspace 1		#(Super)+Shift+1
+Mod4 Shift 2 :SendToWorkspace 2		#(Super)+Shift+2
+Mod4 Shift 3 :SendToWorkspace 3		#(Super)+Shift+3
+Mod4 Shift 4 :SendToWorkspace 4		#(Super)+Shift+4
+Mod4 Shift 5 :SendToWorkspace 5		#(Super)+Shift+5
+Mod4 Shift 6 :SendToWorkspace 6		#(Super)+Shift+6
+Mod4 Shift 7 :SendToWorkspace 7		#(Super)+Shift+7
+Mod4 Shift 8 :SendToWorkspace 8		#(Super)+Shift+8
+Mod4 Shift 9 :SendToWorkspace 9		#(Super)+Shift+9
+Mod4 Shift 0 :SendToWorkspace 10	#(Super)+Shift+0
+Mod4 Shift 20 :SendToWorkspace 11	#(Super)+Shift+(-_) 
+Mod4 Shift 21 :SendToWorkspace 12	#(Super)+Shift+(+=)
 
 # send the current window and change to a specific workspace
-Control Mod4 1 :TakeToWorkspace 1
-Control Mod4 2 :TakeToWorkspace 2
-Control Mod4 3 :TakeToWorkspace 3
-Control Mod4 4 :TakeToWorkspace 4
-Control Mod4 5 :TakeToWorkspace 5
-Control Mod4 6 :TakeToWorkspace 6
-Control Mod4 7 :TakeToWorkspace 7
-Control Mod4 8 :TakeToWorkspace 8
-Control Mod4 9 :TakeToWorkspace 9
-Control Mod4 0 :TakeToWorkspace 10
-Control Mod4 20 :TakeToWorkspace 11
-Control Mod4 21 :TakeToWorkspace 12
+Control Mod4 1 :TakeToWorkspace 1	#(Super)+Control+1
+Control Mod4 2 :TakeToWorkspace 2	#(Super)+Control+2
+Control Mod4 3 :TakeToWorkspace 3	#(Super)+Control+3
+Control Mod4 4 :TakeToWorkspace 4	#(Super)+Control+4
+Control Mod4 5 :TakeToWorkspace 5	#(Super)+Control+5
+Control Mod4 6 :TakeToWorkspace 6	#(Super)+Control+6
+Control Mod4 7 :TakeToWorkspace 7	#(Super)+Control+7
+Control Mod4 8 :TakeToWorkspace 8	#(Super)+Control+8
+Control Mod4 9 :TakeToWorkspace 9	#(Super)+Control+9
+Control Mod4 0 :TakeToWorkspace 10	#(Super)+Control+0
+Control Mod4 20 :TakeToWorkspace 11	#(Super)+Control+(-_) 
+Control Mod4 21 :TakeToWorkspace 12	#(Super)+Control+(+=)
