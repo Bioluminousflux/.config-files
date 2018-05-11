@@ -70,7 +70,6 @@ Mod1 Shift Tab :PrevWindow {groups} (workspace=[current])
 Mod4 Tab :Exec skippy-xd
 
 # open a terminal (xterm)
-Mod4 Return :Exec xterm       	        #White
 Mod4 Return :Exec xterm         #White
 Mod4 g :Exec xterm -fg green    #Green
 Mod4 r :Exec xterm -fg red      #Red
