@@ -139,7 +139,7 @@ ${voffset 4}     1  -  ${top name 1}${alignr}${goto 170} ${goto 222}${top cpu 1}
 ${color5}${font Roboto:size=10}M E M O R Y   ${hr 2}${font}${color}
 
 ${color2}${offset 30}${voffset -12}${color2}RAM: ${color}${alignr}${offset -10}${mem} / ${memmax}${alignr}${membar}
-#${color2}${offset 30}Swap:${color} ${alignr}${offset -10}${swap} / ${swapmax}${alignr}${swapbar}
+${color2}${offset 30}Swap:${color} ${alignr}${offset -10}${swap} / ${swapmax}${alignr}${swapbar}
 
 ${color2}Top Processes${goto 222}cpu%${goto 274}mem%${color}
 ${voffset 4}     1  -  ${top_mem name 1}${alignr}${goto 170} ${goto 222}${top_mem cpu 1} ${goto 274}${top_mem mem_res 1}
@@ -153,9 +153,9 @@ ${voffset 4}     1  -  ${top_mem name 1}${alignr}${goto 170} ${goto 222}${top_me
      9  -  ${top_mem name 9}${alignr}${goto 170} ${goto 222}${top_mem cpu 9} ${goto 274}${top_mem mem_res 9}
    10  -  ${top_mem name 10}${alignr}${goto 170} ${goto 222}${top_mem cpu 10} ${goto 274}${top_mem mem_res 10}
 
-${color5}${font Roboto:size=10}D R I V E S   ${hr 2}${font}${color}
+${color5}${font Roboto:size=10}D I S K   ${hr 2}${font}${color}
 
-${color4}${font}${color}${offset 8}${voffset -12}${color2}Root  -  Flash:${color} ${alignr}${offset -10}${fs_used /} / ${fs_size /}${alignr}${fs_bar}
-${offset 30}${color2}I/O Read:${color} ${alignr}${offset -10}${diskio_read /dev/sdb2}${alignr}${diskiograph_read sdb2 8,100}
-${offset 30}${color2}I/O Write:${color} ${alignr}${offset -10}${diskio_write /dev/sdb2}${alignr}${diskiograph_write sdb2 8,100}
+${color4}${font}${color}${offset 8}${voffset -12}${color2}Root:${color} ${alignr}${offset -10}${fs_used /} / ${fs_size /}${alignr}${fs_bar}
+${offset 30}${color2}I/O Read:${color} ${alignr}${offset -10}${diskio_read /dev/sda2}${alignr}${diskiograph_read sda2 8,100}
+${offset 30}${color2}I/O Write:${color} ${alignr}${offset -10}${diskio_write /dev/sda2}${alignr}${diskiograph_write sda2 8,100}
 ]];
