@@ -131,7 +131,24 @@ ${color2}${offset 5}BSSID: ${color}${wireless_ap wlo1} ${color2}${alignr}Mode: $
 ${color2}${offset 5}Gateway: ${color}${gw_ip wlo1} ${color2}${alignr}Route: ${color}${gw_iface wlo1}
 ${color2}${offset 5}Down: ${color}${downspeed wlo1} ${color2}${alignr}Up: ${color}${upspeed wlo1} $color
 ${color2}${offset 5}${downspeedgraph wlo1 25,140 000000 970300} ${alignr}${upspeedgraph wlo1 25,140 000000 297F00}$color
-${color2}${offset 5}Total: ${color}${totaldown wlo1} ${color2}${alignr}Total: ${color}${totalup wlo1}$color$endif
+${color2}${offset 5}Total: ${color}${totaldown wlo1} ${color2}${alignr}Total: ${color}${totalup wlo1}$color$endif${if_up wlo2}${color2}${alignc}Wireless
+${color2}${offset 5}IP: ${color}${addr wlo2}${alignr}${color2}Quality: ${color}${wireless_link_qual_perc wlo2}%
+${color2}${offset 5}ESSID: ${color}${wireless_essid wlo2} ${color2}${alignr}Rate: ${color}${wireless_bitrate wlo2}
+${color2}${offset 5}BSSID: ${color}${wireless_ap wlo2} ${color2}${alignr}Mode: ${color}${wireless_mode wlo2}
+${color2}${offset 5}Gateway: ${color}${gw_ip wlo2} ${color2}${alignr}Route: ${color}${gw_iface wlo2}
+${color2}${offset 5}Down: ${color}${downspeed wlo2} ${color2}${alignr}Up: ${color}${upspeed wlo2} $color
+${color2}${offset 5}${downspeedgraph wlo2 25,140 000000 970300} ${alignr}${upspeedgraph wlo2 25,140 000000 297F00}$color
+${color2}${offset 5}Total: ${color}${totaldown wlo2} ${color2}${alignr}Total: ${color}${totalup wlo2}$color$endif${if_up wlo3}${color2}${alignc}Wireless
+${color2}${offset 5}IP: ${color}${addr wlo3}${alignr}${color2}Quality: ${color}${wireless_link_qual_perc wlo3}%
+${color2}${offset 5}ESSID: ${color}${wireless_essid wlo3} ${color2}${alignr}Rate: ${color}${wireless_bitrate wlo3}
+${color2}${offset 5}BSSID: ${color}${wireless_ap wlo3} ${color2}${alignr}Mode: ${color}${wireless_mode wlo3}
+${color2}${offset 5}Gateway: ${color}${gw_ip wlo3} ${color2}${alignr}Route: ${color}${gw_iface wlo3}
+${color2}${offset 5}Down: ${color}${downspeed wlo3} ${color2}${alignr}Up: ${color}${upspeed wlo3} $color
+${color2}${offset 5}${downspeedgraph wlo3 25,140 000000 970300} ${alignr}${upspeedgraph wlo3 25,140 000000 297F00}$color
+${color2}${offset 5}Total: ${color}${totaldown wlo3} ${color2}${alignr}Total: ${color}${totalup wlo3}$color$endif
+
+
+
 ${if_up wlan0}${color2}${alignc}Wireless
 $${color2}${offset 5}IP: ${color}${addr wlan0}${alignr}${color2}Quality: ${color}${wireless_link_qual_perc wlan0}%
 ${color2}${offset 5}ESSID: ${color}${wireless_essid wlan0} ${color2}${alignr}Rate: ${color}${wireless_bitrate wlan0}
