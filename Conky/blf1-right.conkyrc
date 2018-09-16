@@ -72,19 +72,13 @@ color1 = '#8FA1B3',
 };
 
 conky.text = [[
-#${alignc}S Y S T E M    I N F O
-#${hr}
-#${alignc}$sysname $kernel
-#${alignc}${nodename}
-#Uptime:${alignc}${uptime}
-#UTC:${alignc}${utime %H:%M | %r}
-#Battery: ${alignc}${battery}
-#${hr}
 ${alignc}D I S K
 
 ${goto 60}Used${alignr}Size
+#Boot${goto 60}${fs_used /boot}${alignr}${fs_size /boot}
 Root${goto 60}${fs_used /}${alignr}${fs_size /}
 #Home${goto 60}${fs_used /home}${alignr}${fs_size /home}
+
 ${hr}
 ${alignc}M E M O R Y
 
