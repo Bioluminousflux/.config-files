@@ -72,17 +72,15 @@ color1 = '#8FA1B3',
 };
 
 conky.text = [[
-#${alignc}S Y S T E M    I N F O
-${alignc}$sysname $kernel
-${alignc}${nodename}
-${hr}
 ${alignc}S Y S T E M    I N F O
 
+${alignc}$sysname $kernel
+${alignc}${nodename}
 Uptime:${alignr}${uptime}
 UTC:${alignc}${utime %H:%M | %r}
 Battery:${alignr}${battery}
-#Users Logged In: ${alignc}${user_number}
-#Usernames: ${alignc}${user_names}
+Users Logged In: ${alignc}${user_number}
+Usernames: ${alignc}${user_names}
 ${alignc}Desktop ${desktop}
 ${hr}
 ${alignc}E N T R O P Y
@@ -93,17 +91,17 @@ ${hr}
 ${alignc}S H O R T C U T    K E Y S
 
 [PrtSc]${alignr}Screenshot
-[S]${alignr}Launcher
-[S] + Space${alignr}Menu
-[S] + Return${alignr}Termite
-[S] + t${alignr}Terminator
-[S] + d${alignr}Show Desktop
-[S] + f${alignr}Text Editor
-[S] + e${alignr}File Manager
-[S] + m${alignr}Music Player
-[S] + w${alignr}Web Browser
-[S] + v${alignr}Audio Control
-[S] + Tab${alignr}Task View
-[S] + Shift + r${alignr}Reload Configs
-[S] + x${alignr}Logout
+#[S]${alignr}Launcher
+#[S] + Space${alignr}Menu
+#[S] + Return${alignr}Termite
+#[S] + t${alignr}Terminator
+#[S] + d${alignr}Show Desktop
+#[S] + f${alignr}Text Editor
+#[S] + e${alignr}File Manager
+#[S] + m${alignr}Music Player
+#[S] + w${alignr}Web Browser
+#[S] + v${alignr}Audio Control
+#[S] + Tab${alignr}Task View
+#[S] + Shift + r${alignr}Reload Configs
+#[S] + x${alignr}Logout
 ]];
