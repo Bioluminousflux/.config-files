@@ -1,0 +1,203 @@
+# 
+#888888ba                      dP                              
+# 88    8b                     88                              
+#a88aaaa8P  dP    dP  d8888b. d8888P 88d888b. .d8888b. .d8888b. 
+# 88     8b 88    88 88    88   88   88    88 88'   88 88'   88 
+# 88     88 88  .88  88    88   88   88       88.  .88 88.  .88 
+# 88888888P  88888P   8888P88   dP   dP        88888P8  8888P88 
+#                         .88                                88 
+#                     d8888P                                 dP 
+#
+#                  Security Spanish Team
+#
+#               [- http://www.bugtraq-team.com -]
+####
+
+
+use_xft yes
+xftfont DroidSans:size=8.75
+xftalpha 0.1
+text_buffer_size 2048
+override_utf8_locale yes
+background yes
+update_interval 4 #test
+total_run_times 0
+own_window yes
+own_window_argb_visual yes
+own_window_transparent yes
+own_window_type normal
+own_window_title clicky
+own_window_hints undecorated,below,skip_taskbar,skip_pager
+imlib_cache_size 0
+double_buffer yes
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+out_to_ncurses no
+out_to_console no
+alignment top_right
+#minimum_size 240 0
+minimum_size 400 450
+maximum_width 310
+gap_x 8
+gap_y 33
+short_units yes
+pad_percents 0
+border_inner_margin 4
+top_name_width 10
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+net_avg_samples 2
+use_spacer right
+color0 red
+color1 green
+color2 red
+color3 white
+color4 000099 
+color5 3333FF
+color6 DarkGray
+color7 AntiqueWhite4
+color8 DarkSlateGray
+color9 Black
+
+
+
+####
+## Fuentes requeridas.
+#
+# ConkyWeather (Stanko Metodiev)
+# ConkyWindNESW (Stanko Metodiev)
+# Cut Outs for 3D FX (Fonts & Things)
+# Droid Font Family (Google Android SDK)
+# Moon Phases (Curtis Clark)
+# OpenLogos (Icoma)
+# PizzaDude Bullets (Jakob Fischer)
+# Radio Space (Iconian Fonts)
+# StyleBats (Vinterstille)
+# Ubuntu (Canonical Ltd)
+# Ubuntu Title Bold (Paulo Silva)
+# Weather (Jonathan Macagba)
+
+#LUA Scripts
+lua_load /bugtraq/scripts/conky/button/click_test.lua
+lua_load /bugtraq/scripts/conky/button/click_record.lua
+lua_load /bugtraq/scripts/conky/button/click_run_last.lua
+lua_load /bugtraq/scripts/conky/barras-laterales/avi9526_conky.lua
+#lua_load /bugtraq/scripts/conky/logs/draw-bg.lua
+#lua_load /bugtraq/scripts/conky/logs/s11buttons.lua
+#lua_draw_hook_pre conky_main
+lua_draw_hook_pre Widgets
+
+TEXT
+${image /bugtraq/icons/black-widow-icon4.png -p 80,1 -s 50x45}${image /bugtraq/icons/conkylogo.png -p 130,-1 -s 190x43}             
+##################
+##     LOGO     ##
+##################
+#${voffset -1}${font OpenLogos:size=103}${color2}v${font}${voffset -76}#${goto 178}${font UbuntuTitleBold:size=20}${color4}${pre_exec lsb_release -r -s}${font}
+##################
+##    SYSTEM    ##
+##################
+${voffset 30}${offset 120}${font DroidSans:bold:size=8.25}${color6}SYSTEM${offset 8}${color6}${voffset -2}${hr 2}${font}
+${voffset 5}${offset 120}${font StyleBats:size=8}${color2}${voffset -4}${font DroidSans:size=8.65}${color3}${offset 5}${sysname}${offset 5}${kernel}${alignr}${font DroidSans:size=8.45}${machine}${font}
+##################
+##     HDD      ##
+##################
+##################
+##   SERVICES  ##
+##################
+${voffset 2}${offset 120}${font DroidSans:bold:size=8}${color6}SERVICES${offset 8}${color6}${voffset -2}${hr 2}${font}
+#APACHE#
+${offset 170}${voffset 0}${font DroidSans:size=8.75}${offset -35}${image /bugtraq/icons/apache.png -p 120,95.5 -s 14x14}${color3} Apache${font DroidSans:bold:size=8.5}${image /bugtraq/icons/ON.png -p 193,94 -s 30x14}${image /bugtraq/icons/OFF.png -p 230,94 -s 30x14}${offset 89}${execp /bugtraq/scripts/conky/scripts/apache.sh}
+#AUTOPSY#
+${voffset 5}${font DroidSans:size=8.75}${offset 120}${image /bugtraq/icons/autopsy.png -p 120,112.5 -s 14x14}${voffset 0}${font DroidSans:size=8.75}${offset 18}${color3}Autopsy${image /bugtraq/icons/ON.png -p 193,114 -s 30x14}${image /bugtraq/icons/OFF.png -p 230,114 -s 30x14}${font DroidSans:bold:size=8.5}${color2}${offset 84}${execp /bugtraq/scripts/conky/scripts/autopsy.sh}
+#BEEF#
+${voffset 6}${offset 120}${image /bugtraq/icons/beef.png -p 121,132 -s 14x14}${voffset 0}${font DroidSans:size=8.75}${offset 18}${color3} Beff${image /bugtraq/icons/ON.png -p 193,134 -s 30x14}${image /bugtraq/icons/OFF.png -p 230,134 -s 30x14}${font DroidSans:bold:size=8.5}${color2}${offset 100}${execp /bugtraq/scripts/conky/scripts/beef.sh}
+#EvilGrade#
+${voffset 7}${font DroidSans:size=8.75}${offset 128}${image /bugtraq/icons/evilgrade.png -p 120,153 -s 14x14}${voffset 0}${font DroidSans:size=8.75}${offset 5}${color3} Evilgrade${image /bugtraq/icons/ON.png -p 193,154 -s 30x14}${image /bugtraq/icons/OFF.png -p 230,154 -s 30x14}${font DroidSans:bold:size=8.5}${offset 81}${execp /bugtraq/scripts/conky/scripts/evilgrade.sh}
+#GreenBONE#
+${voffset 6}${font DroidSans:size=8.75}${offset 128}${image /bugtraq/icons/greenbone.png -p 120,174 -s 14x14}${voffset 0}${font DroidSans:size=8.75}${offset 9}${color3}G. Bone${image /bugtraq/icons/ON.png -p 193,174 -s 30x14}${image /bugtraq/icons/OFF.png -p 230,174 -s 30x14}${font DroidSans:bold:size=8.5}${offset 87}${execp /bugtraq/scripts/conky/scripts/greenbone.sh}
+#I2P#
+#${voffset 6}${offset 120}${image /bugtraq/icons/i2p.jpeg -p 120,193.5-s 14x14}${voffset 0}${font DroidSans:size=8.75}${offset 24}${color3}I2P${image /bugtraq/icons/ON.png -p 193,194 -s 30x14}${image /bugtraq/icons/OFF.png -p 230,194 -s 30x14}${font DroidSans:bold:size=8.5}${color2}${offset 104}${execp /bugtraq/scripts/conky/scripts/i2p.sh}
+#METASPLOIT#
+${voffset 6}${font DroidSans:size=8.75}${offset 15}${image /bugtraq/icons/mestaploit.png -p 120,193 -s 14x14}${voffset 0}${font DroidSans:size=8.75}${offset 128}${color3}MSF${image /bugtraq/icons/ON.png -p 193,194 -s 30x14}${image /bugtraq/icons/OFF.png -p 230,194 -s 30x14}${font DroidSans:bold:size=8.5}${offset 100}${execp /bugtraq/scripts/conky/scripts/msf.sh}
+#NESSUS#
+${voffset 6}${font DroidSans:size=8.75}${offset 15}${image /bugtraq/icons/nessus.png -p 120,213 -s 14x14}${voffset 0}${font DroidSans:size=8.75}${offset 122}${color3}Nessus${image /bugtraq/icons/ON.png -p 193,214 -s 30x14}${image /bugtraq/icons/OFF.png -p 230,214 -s 30x14}${font DroidSans:bold:size=8.5}${offset 91}${execp /bugtraq/scripts/conky/scripts/ness.sh}
+#OPENVAS#
+${voffset 6}${font DroidSans:size=8.75}${offset 15}${image /bugtraq/icons/openvas.png -p 120,232 -s 15x15}${voffset 0}${font DroidSans:size=8.75}${offset 122}${color3}OpenVas${image /bugtraq/icons/ON.png -p 193,234 -s 30x14}${image /bugtraq/icons/OFF.png -p 230,234 -s 30x14}${font DroidSans:bold:size=8.5}${offset 81}${execp /bugtraq/scripts/conky/scripts/openv.sh}
+#OSIRIS#
+${voffset 6}${font DroidSans:size=8.75}${offset 15}${image /bugtraq/icons/osiris-sps.png -p 120,254 -s 14x14}${voffset 0}${font DroidSans:size=8.75}${offset 122}${color3}Osiris${image /bugtraq/icons/ON.png -p 193,254 -s 30x14}${image /bugtraq/icons/OFF.png -p 230,254 -s 30x14}${font DroidSans:bold:size=8.5}${offset 98}${execp /bugtraq/scripts/conky/scripts/osiris.sh}
+#Set-WEB#
+${voffset 6}${font DroidSans:size=8.75}${offset 130}${image /bugtraq/icons/set.jpeg -p 120,273 -s 14x14}${voffset 0}${font DroidSans:size=8.75}${offset 5}${color3}   Set${image /bugtraq/icons/ON.png -p 193,274 -s 30x14}${image /bugtraq/icons/OFF.png -p 230,274 -s 30x14}${font DroidSans:bold:size=8.5}${color1}${offset 105}${execp /bugtraq/scripts/conky/scripts/set-web.sh}
+#SNORT#
+${voffset 6}${font DroidSans:size=8.75}${offset 130}${image /bugtraq/icons/Snort_pig_157sq_normal.gif -p 120,293 -s 14x14}${voffset 0}${font DroidSans:size=8.75}${offset 5}${color3}  Snort${image /bugtraq/icons/ON.png -p 193,294 -s 30x14}${image /bugtraq/icons/OFF.png -p 230,294 -s 30x14}${font DroidSans:bold:size=8.5}${offset 95}${execp /bugtraq/scripts/conky/scripts/snort.sh}
+#VIRTUALBOX#
+${voffset 6}${font DroidSans:size=8.75}${offset 130}${image /bugtraq/icons/virtualbox.png -p 120,313 -s 14x14}${voffset 0}${font DroidSans:size=8.75}${offset 5}${color3}  V. Box${image /bugtraq/icons/ON.png -p 193,314 -s 30x14}${image /bugtraq/icons/OFF.png -p 230,314 -s 30x14}${font DroidSans:bold:size=8.5}${offset 91}${execp /bugtraq/scripts/conky/scripts/virtual.sh}
+#WIFIZOO#
+${voffset 6}${font DroidSans:size=8.75}${offset 130}${image /bugtraq/icons/wifi.png -p 120,333 -s 14x14}${voffset 0}${font DroidSans:size=8.75}${offset 5}${color3}  WifiZoo${image /bugtraq/icons/ON.png -p 193,334 -s 30x14}${image /bugtraq/icons/OFF.png -p 230,334 -s 30x14}${font DroidSans:bold:size=8.5}${offset 84}${execp /bugtraq/scripts/conky/scripts/wifizoo.sh}
+#XPLICO#
+${voffset 6}${font DroidSans:size=8.75}${offset 130}${image /bugtraq/icons/xplico.png -p 120,353 -s 14x14}${voffset 0}${font DroidSans:size=8.75}${offset 5}${color3}  Xplico${image /bugtraq/icons/ON.png -p 193,354 -s 30x14}${image /bugtraq/icons/OFF.png -p 230,354 -s 30x14}${font DroidSans:bold:size=8.5}${offset 93}${execp /bugtraq/scripts/conky/scripts/xplico1.sh}
+##################
+##     DB       ##
+##################
+${voffset 2}${offset 120}${font DroidSans:bold:size=8}${color6}DATA BASES${offset 8}${color6}${voffset -2}${hr 2}${font}
+#POSTGRES#
+${voffset 2}${font DroidSans:size=8.75}${offset 130}${image /bugtraq/icons/postgres.png -p 120,385 -s 14x14}${voffset 0}${font DroidSans:size=8.75}${offset 5}${color3}Postgres${image /bugtraq/icons/ON.png -p 193,386 -s 30x14}${image /bugtraq/icons/OFF.png -p 230,386 -s 30x14}${font DroidSans:bold:size=8.5}${offset 85}${execp /bugtraq/scripts/conky/scripts/postgres.sh}
+#MYSQL#
+${voffset 6}${font DroidSans:size=8.75}${offset 130}${image /bugtraq/icons/mysql.png -p 120,405 -s 14x14}${voffset 0}${font DroidSans:size=8.75}${offset 5}${color3}  MySQL${image /bugtraq/icons/ON.png -p 193,406 -s 30x14}${image /bugtraq/icons/OFF.png -p 230,406 -s 30x14}${font DroidSans:bold:size=8.5}${offset 87}${execp /bugtraq/scripts/conky/scripts/mysql.sh}${color1}
+##################
+##      ANTIVIRUS            ##
+##################
+${voffset 3}${offset 120}${font DroidSans:bold:size=8}${color6}ANTIVIRUS${offset 8}${color6}${voffset -2}${hr 2}${font}
+#Avast#
+${voffset 0}${font DroidSans:size=8.75}${offset 15}${image /bugtraq/icons/avast.png -p 120,435 -s 12x12}${voffset 0}${font DroidSans:size=8.75}${offset 124}${offset 5}${color3}Avast${font DroidSans:bold:size=8.5}${color1}${offset 45}${exec /bugtraq/scripts/conky/scripts/avast1.sh}${color2}${exec /bugtraq/scripts/conky/scripts/avast2.sh}
+#AVG#
+${voffset 0}${font DroidSans:size=8.75}${offset 15}${image /bugtraq/icons/AVG.png -p 120,450 -s 10x10}${voffset 0}${font DroidSans:size=8.75}${offset 130}${color3}AVG${font DroidSans:bold:size=8.5}${color1}${offset 50}${exec /bugtraq/scripts/conky/scripts/avg1.sh}${color2}${exec /bugtraq/scripts/conky/scripts/avg2.sh}
+#Avira#
+${voffset 0}${font DroidSans:size=8.75}${offset 15}${image /bugtraq/icons/avira.gif -p 120,463 -s 13x13}${voffset 0}${font DroidSans:size=8.75}${offset 130}${color3}Avira${font DroidSans:bold:size=8.5}${color1}${offset 45}${exec /bugtraq/scripts/conky/scripts/avira1.sh}${color2}${exec /bugtraq/scripts/conky/scripts/avira2.sh}
+#BITDEFENDER#
+${voffset 0}${font DroidSans:size=8.75}${offset 15}${image /bugtraq/icons/bitdefender_256.png -p 120,477 -s 12x12}${voffset 0}${font DroidSans:size=8.75}${offset 130}${color3}Bitdefender${font DroidSans:bold:size=8.5}${color1}${offset 10}${exec /bugtraq/scripts/conky/scripts/bit1.sh}${color2}${exec /bugtraq/scripts/conky/scripts/bit2.sh}
+#ClamAV#
+${voffset 0}${font DroidSans:size=8.75}${offset 15}${image /bugtraq/icons/clamav.gif -p 120,491 -s 10x10}${voffset 0}${font DroidSans:size=8.75}${offset 130}${color3}ClamAV${font DroidSans:bold:size=8.5}${color1}${offset 32}${exec /bugtraq/scripts/conky/scripts/clam1.sh}${color2}${exec /bugtraq/scripts/conky/scripts/clam2.sh}
+#Nod32#
+${voffset 0}${font DroidSans:size=8.75}${offset 15}${image /bugtraq/icons/nod32.png -p 120,505 -s 11x11}${voffset 0}${font DroidSans:size=8.75}${offset 130}${color3}Nod32${font DroidSans:bold:size=8.5}${color1}${offset 37}${exec /bugtraq/scripts/conky/scripts/nod1.sh}${color2}${exec /bugtraq/scripts/conky/scripts/nod2.sh}
+##################
+##      RED     ##
+##################
+##################
+##  RAM MEMORY    ##
+##################
+${offset 68}${voffset -450}${color }$mem  
+${offset 80}${voffset -30}$memperc%          
+${offset 20}${voffset 142}$swap$swapperc%
+
+
+#CPU
+${offset -5}${voffset 20}${color2}${image /bugtraq/icons/cpu.png -p 1,265 -s 20x20}${color3}${offset 35}${font DroidSans:size=8.3}${cpu cpu0}%${offset 2}${cpu cpu1}%${offset 2}${cpu cpu2}%${offset 2}${cpu cpu3}%
+
+#${offset 120}${voffset 4}${font DroidSans:bold:size=8}${color6}NETWORK${offset 8}${color6}${voffset -2}${hr 2}${font}
+#${offset 120}${voffset 4}${font StyleBats:size=9.5}${color6}${font DroidSans:size=8.5}${color slate grey}${offset 5}IP${offset 3}Privada${color3}${alignr}${font DroidSans:size=8.3}${if_match "${addr wlan0}" != "No Address"}${addr wlan0}${else}${addr eth0}${endif}${font}
+#${voffset 4}${font DroidSans:bold:size=8}${color6}TOP PROCESOS${offset 8}${color6}${voffset -2}${hr 2}${font}
+#                             ${color #ddaa00} ${top name 1}${top_mem cpu 1}
+#                             ${color lightgrey} ${top name 2}${top cpu 2}
+#                             ${color lightgrey} ${top name 3}${top cpu 3}
+#                             ${color lightgrey} ${top name 4}${top cpu 4}
+
+
+${voffset -13}${offset 0}${color #7f8ed3}System: $color${fs_used /}/${fs_size /}${alignr}
+${image /bugtraq/icons/system.png -p 67,330 -s 25x25}
+${voffset 100}${offset 0}${color #7f8ed3}Home: ${color FFFFFF}${fs_used /home} / ${fs_size /home}${alignr}
+${image /bugtraq/icons/home.png -p 52,390 -s 25x25}
+
+
+
+
+${execpi 70 wget -N http://www.bugtraq-team.com:6969/conky.bug}
+${image /bugtraq/icons/chat.png -p 23,446 -s 70x40}
+  
+${offset 15}${voffset -17}${color yellow}${font DroidSans:bold:size=8.5}${rss www.bugtraq-team.com:6969/web/rss.xml 10 feed_title}
+${execpi 70 /bugtraq/scripts/conky/scripts/exploits.sh}
+#${color white}${font DroidSans:size=7.5}${rss www.bugtraq-team.com:6969/web/rss.xml 12 item_titles 12}
+${image /bugtraq/icons/black-widow-icon4.png -p 0,528 -s 14x14}${offset 15}${color orange}${font DroidSans:bold:size=8.5}
+${lua record}${lua main}${lua run_last}

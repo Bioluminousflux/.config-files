@@ -1,0 +1,105 @@
+# 
+#888888ba                      dP                              
+# 88    8b                     88                              
+#a88aaaa8P  dP    dP  d8888b. d8888P 88d888b. .d8888b. .d8888b. 
+# 88     8b 88    88 88    88   88   88    88 88'   88 88'   88 
+# 88     88 88  .88  88    88   88   88       88.  .88 88.  .88 
+# 88888888P  88888P   8888P88   dP   dP        88888P8  8888P88 
+#                         .88                                88 
+#                     d8888P                                 dP 
+#
+#                  Security Spanish Team
+#
+#               [- http://www.bugtraq-team.com -]
+####
+
+
+use_xft yes
+xftfont DroidSans:size=8.75
+xftalpha 0.1
+text_buffer_size 2048
+override_utf8_locale yes
+background yes
+update_interval 4 #test
+total_run_times 0
+own_window yes
+own_window_argb_visual yes
+own_window_transparent yes
+own_window_type normal
+own_window_title clicky
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+imlib_cache_size 0
+double_buffer yes
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+out_to_ncurses no
+out_to_console no
+alignment top_right
+#minimum_size 240 0
+minimum_size 400 450
+maximum_width 310
+gap_x 8
+gap_y 33
+short_units yes
+pad_percents 0
+border_inner_margin 4
+top_name_width 10
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+net_avg_samples 2
+use_spacer right
+color0 red
+color1 green
+color2 red
+color3 white
+color4 000099 
+color5 3333FF
+color6 DarkGray
+color7 AntiqueWhite4
+color8 DarkSlateGray
+color9 Black
+
+
+
+####
+## Fuentes requeridas.
+#
+# ConkyWeather (Stanko Metodiev)
+# ConkyWindNESW (Stanko Metodiev)
+# Cut Outs for 3D FX (Fonts & Things)
+# Droid Font Family (Google Android SDK)
+# Moon Phases (Curtis Clark)
+# OpenLogos (Icoma)
+# PizzaDude Bullets (Jakob Fischer)
+# Radio Space (Iconian Fonts)
+# StyleBats (Vinterstille)
+# Ubuntu (Canonical Ltd)
+# Ubuntu Title Bold (Paulo Silva)
+# Weather (Jonathan Macagba)
+
+#LUA Scripts
+lua_load /bugtraq/scripts/conky/ON-OFF/button/click_test.lua
+lua_load /bugtraq/scripts/conky/ON-OFF/button/click_record.lua
+lua_load /bugtraq/scripts/conky/ON-OFF/button/click_run_last.lua
+#lua_load /bugtraq/scripts/conky/ON-OFF/barras-laterales/avi9526_conky.lua
+#lua_load /bugtraq/scripts/conky/ON-OFF/logs/draw-bg.lua
+#lua_load /bugtraq/scripts/conky/ON-OFF/logs/s11buttons.lua
+lua_draw_hook_pre conky_main
+#lua_draw_hook_pre Widgets
+
+TEXT
+${image /bugtraq/icons/ubuntu.png -p 80,1 -s 50x45}${image /bugtraq/icons/conkylogo.png -p 120,-1 -s 200x60}             
+##################
+##     LOGO     ##
+##################
+#${voffset -1}${font OpenLogos:size=103}${color2}v${font}${voffset -76}#${goto 178}${font UbuntuTitleBold:size=20}${color4}${pre_exec lsb_release -r -s}${font}
+##################
+##    SYSTEM    ##
+##################
+${voffset 30}${offset 120}${font DroidSans:bold:size=8.25}${color6}SYSTEM${offset 8}${color6}${voffset -2}${hr 2}${font}
+${voffset 5}${offset 170}${font StyleBats:size=8}${color2}${voffset -4}${font DroidSans:size=8.65}${color3}${offset 5}${sysname}${offset 5}${kernel}${alignr}${font DroidSans:size=8.45}${machine}${font}
+${image /bugtraq/icons/on.png -p 2,0 -s 70x70}
+${lua record}${lua main}${lua run_last}

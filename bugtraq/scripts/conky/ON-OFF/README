@@ -1,0 +1,5 @@
+#xdotool + libreria
+sudo aptitude install xdotool
+
+#Conky
+sudo aptitude install conky-all
