@@ -2,7 +2,7 @@
 #------------------------------------------------------------------------------------
 # - Name: ./webgoat.sh 
 # - Version: 1.0
-# - Date: 26/11/2011
+# - Date: November 26th, 2011
 # - Creator: Bugtraq-Team
 # - Description: This script checks the status of Webgoat in conky
 #------------------------------------------------------------------------------------
