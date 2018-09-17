@@ -8,10 +8,14 @@
 #                         .88                                88 
 #                     d8888P                                 dP 
 #
-#                  Security Spanish Team
+###############################################################
 #
-#               [- http://www.bugtraq-team.com -]
-####
+#     Originally Authored by  Bugtraq Security Spanish Team
+#              [- http://www.bugtraq-team.com-]
+#       
+#        Translations/Modifications by Bioluminousflux
+#
+###############################################################
 
 
 use_xft yes
