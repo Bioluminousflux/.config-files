@@ -1,1 +1,1 @@
-${color}xchat      ${color green}TCP  32952  ${color orange}64.32.24.176     : 8001
+#${color}xchat      ${color green}TCP  32952  ${color orange}64.32.24.176     : 8001
