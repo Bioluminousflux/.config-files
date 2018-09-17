@@ -1,10 +1,10 @@
 #!/usr/bin/ksh
 #------------------------------------------------------------------------------------
-# - Nombre: ./bluetooth.sh 
+# - Name: ./bluetooth.sh 
 # - Version: 1.0
-# - Fecha: 26/11/2011
-# - Creador: Bugtraq-Team
-# - descripción: Este script comprueba el estado del bluetooth en el conky
+# - Date: November 26th, 2011
+# - Creator: Bugtraq-Team
+# - Description: This script checks the status of Bluetooth in the conky
 #------------------------------------------------------------------------------------
 ###################################################################################################
 #Bluetooth
