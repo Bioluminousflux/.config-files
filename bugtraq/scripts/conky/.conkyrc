@@ -88,7 +88,7 @@ color9 Black
 lua_load /bugtraq/scripts/conky/button/click_test.lua
 lua_load /bugtraq/scripts/conky/button/click_record.lua
 lua_load /bugtraq/scripts/conky/button/click_run_last.lua
-lua_load /bugtraq/scripts/conky/barras-laterales/avi9526_conky.lua
+lua_load /bugtraq/scripts/conky/sidebars/avi9526_conky.lua
 #lua_load /bugtraq/scripts/conky/logs/draw-bg.lua
 #lua_load /bugtraq/scripts/conky/logs/s11buttons.lua
 #lua_draw_hook_pre conky_main
@@ -197,10 +197,10 @@ ${image /bugtraq/icons/home.png -p 52,390 -s 25x25}
 
 
 
-${execpi 70 wget -N http://www.bugtraq-team.com:6969/conky.bug}
+#${execpi 70 wget -N http://www.bugtraq-team.com:6969/conky.bug}
 ${image /bugtraq/icons/chat.png -p 23,446 -s 70x40}
   
-${offset 15}${voffset -17}${color yellow}${font DroidSans:bold:size=8.5}${rss www.bugtraq-team.com:6969/web/rss.xml 10 feed_title}
+#${offset 15}${voffset -17}${color yellow}${font DroidSans:bold:size=8.5}${rss www.bugtraq-team.com:6969/web/rss.xml 10 feed_title}
 ${execpi 70 /bugtraq/scripts/conky/scripts/exploits.sh}
 #${color white}${font DroidSans:size=7.5}${rss www.bugtraq-team.com:6969/web/rss.xml 12 item_titles 12}
 ${image /bugtraq/icons/black-widow-icon4.png -p 0,528 -s 14x14}${offset 15}${color orange}${font DroidSans:bold:size=8.5}
