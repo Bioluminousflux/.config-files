@@ -1,10 +1,10 @@
 #!/usr/bin/ksh
 #------------------------------------------------------------------------------------
-# - Nombre: ./av.sh 
+# - Name: ./av.sh 
 # - Version: 1.0
-# - Fecha: 26/11/2011
-# - Creador: Bugtraq Team
-# - descripción: Este script compruba el estadado de  los antivirus en el conky
+# - Date: November 26th, 2011
+# - Creator: Bugtraq-Team
+# - Description: This script checks the status of the Antivirus in the conky
 #------------------------------------------------------------------------------------
 ###################################################################################################
 #AVG
