@@ -87,7 +87,7 @@ color9 Black
 lua_load /bugtraq/scripts/conky/ON-OFF/button/click_test.lua
 lua_load /bugtraq/scripts/conky/ON-OFF/button/click_record.lua
 lua_load /bugtraq/scripts/conky/ON-OFF/button/click_run_last.lua
-#lua_load /bugtraq/scripts/conky/ON-OFF/barras-laterales/avi9526_conky.lua
+#lua_load /bugtraq/scripts/conky/ON-OFF/sidebars/avi9526_conky.lua
 #lua_load /bugtraq/scripts/conky/ON-OFF/logs/draw-bg.lua
 #lua_load /bugtraq/scripts/conky/ON-OFF/logs/s11buttons.lua
 lua_draw_hook_pre conky_main
