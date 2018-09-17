@@ -1,10 +1,10 @@
 #!/usr/bin/ksh
 #------------------------------------------------------------------------------------
-# - Nombre: ./autopsy.sh 
+# - Name: ./autopsy.sh 
 # - Version: 1.0
-# - Fecha: 26/11/2011
-# - Creador: Bugtraq Team
-# - descripción: Este script compruba el estadado de autopsy
+# - Date: November 26th, 2011
+# - Creator: Bugtraq Team
+# - Description: This script compiles the status of Autopsy
 #------------------------------------------------------------------------------------
 ###################################################################################################
 #Autopsy
