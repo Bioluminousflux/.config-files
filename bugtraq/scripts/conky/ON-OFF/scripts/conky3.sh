@@ -1,11 +1,10 @@
 #!/usr/bin/ksh
 #------------------------------------------------------------------------------------
-# - Nombre: ./conky3.sh 
+# - Name: ./conky3.sh 
 # - Version: 1.0
-# - Fecha: 26/11/2011
-# - Creador: Bugtraq-Team
-# - descripción: Este script comprueba el estado de las
-#    bases de datos Postgres y mysql en el conky
+# - Date: Novmeber 26th, 2011
+# - Creator: Bugtraq-Team
+# - Description: This script checks the status of the Postgres and mysql databases in the conky
 #------------------------------------------------------------------------------------
 #Potsgres
 if /etc/init.d/postgresql-8.4 status | grep "8.4/main" > /dev/null 2>&1
