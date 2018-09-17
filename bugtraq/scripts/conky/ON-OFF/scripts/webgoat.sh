@@ -1,10 +1,10 @@
 #!/usr/bin/ksh
 #------------------------------------------------------------------------------------
-# - Nombre: ./webgoat.sh 
+# - Name: ./webgoat.sh 
 # - Version: 1.0
-# - Fecha: 26/11/2011
-# - Creador: Bugtraq-Team
-# - descripción: Este script comprueba el estado del webgoaten el conky
+# - Date: 26/11/2011
+# - Creator: Bugtraq-Team
+# - Description: This script checks the status of Webgoat in conky
 #------------------------------------------------------------------------------------
 ###################################################################################################
 #Webgoat
