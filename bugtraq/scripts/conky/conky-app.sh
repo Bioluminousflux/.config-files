@@ -7,7 +7,7 @@ useragent=`cat /etc/privoxy/user-agent.action | grep +hide-user-agent | sed 's/+
 
 function action(){
 
- yad --form --field Services:chk --field Network_and_Proxys:chk --field Conexions:chk  --field Iptables:chk 'true' false '' false '' false '' false > res1 \
+ yad --form --field Services:chk --field Network_and_Proxys:chk --field Connections:chk  --field Iptables:chk 'true' false '' false '' false '' false > res1 \
     --window-icon="/bugtraq/icons/black-widow-icon3.png" --button="Quit:4" --button="Stop All:5" --button="Launch:6"--buttons-layout=edge \
     --title="Conky Manager" --fixed --width=400 --height=300
 }
@@ -30,9 +30,9 @@ fi
 
 if [[ $ret -eq 6 ]] ; then
 
-cat res1 | awk -F "\|" '{print $1}' > servicios
+cat res1 | awk -F "\|" '{print $1}' > services
 
-if cat servicios | grep TRUE
+if cat services | grep TRUE
 	then
 		conky -c /bugtraq/scripts/conky/.conkyrc &
 fi
@@ -42,10 +42,10 @@ if cat network | grep TRUE
 	then
 		conky -c /bugtraq/scripts/conky/proxys.conf &
 fi
-cat res1 | awk -F "\|" '{print $3}' > conexiones
-if cat conexiones | grep TRUE
+cat res1 | awk -F "\|" '{print $3}' > connections
+if cat connections | grep TRUE
 	then
-		conky -c /bugtraq/scripts/conky/conexiones.conf &
+		conky -c /bugtraq/scripts/conky/connections.conf &
 fi
 
 cat res1 | awk -F "\|" '{print $4}' > iptables
