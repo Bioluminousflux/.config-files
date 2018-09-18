@@ -1,12 +1,12 @@
-#!/usr/bin/ksh
+!/usr/bin/ksh
 #------------------------------------------------------------------------------------
-# - Nombre: ./nod2.sh 
+# - Name: ./nod2.sh 
 # - Version: 1.0
-# - Fecha: 26/11/2011
-# - Creador: Bugtraq-Team
-# - descripción: Este script comprueba el estado del nod32 en el conky
+# - Date: November 26th, 2011
+# - Creator: Bugtraq-Team
+# - Description: This checks the status of Nod 32 in the conky
 #------------------------------------------------------------------------------------
-#####################################################
+#####################################################################################
 #Eset Nod 32
 if [ -f /opt/eset/esets/sbin/esets_scan ]
 then
