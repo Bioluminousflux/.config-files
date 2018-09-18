@@ -69,7 +69,7 @@ color9 Black
 
 
 ####
-## Fuentes requeridas.
+##       Required Sources
 #
 # ConkyWeather (Stanko Metodiev)
 # ConkyWindNESW (Stanko Metodiev)
@@ -181,7 +181,7 @@ ${offset 20}${voffset 142}$swap$swapperc%
 ${offset -5}${voffset 20}${color2}${image /bugtraq/icons/cpu.png -p 1,265 -s 20x20}${color3}${offset 35}${font DroidSans:size=8.3}${cpu cpu0}%${offset 2}${cpu cpu1}%${offset 2}${cpu cpu2}%${offset 2}${cpu cpu3}%
 
 #${offset 120}${voffset 4}${font DroidSans:bold:size=8}${color6}NETWORK${offset 8}${color6}${voffset -2}${hr 2}${font}
-#${offset 120}${voffset 4}${font StyleBats:size=9.5}${color6}${font DroidSans:size=8.5}${color slate grey}${offset 5}IP${offset 3}Privada${color3}${alignr}${font DroidSans:size=8.3}${if_match "${addr wlan0}" != "No Address"}${addr wlan0}${else}${addr eth0}${endif}${font}
+#${offset 120}${voffset 4}${font StyleBats:size=9.5}${color6}${font DroidSans:size=8.5}${color slate grey}${offset 5}IP${offset 3}Private${color3}${alignr}${font DroidSans:size=8.3}${if_match "${addr wlan0}" != "No Address"}${addr wlan0}${else}${addr eth0}${else}${addr wlo1}${else}${addr eno1}${endif}${font}
 #${voffset 4}${font DroidSans:bold:size=8}${color6}TOP PROCESOS${offset 8}${color6}${voffset -2}${hr 2}${font}
 #                             ${color #ddaa00} ${top name 1}${top_mem cpu 1}
 #                             ${color lightgrey} ${top name 2}${top cpu 2}
