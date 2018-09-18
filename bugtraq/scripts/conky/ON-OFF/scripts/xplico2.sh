@@ -1,12 +1,12 @@
 #!/usr/bin/ksh
 #------------------------------------------------------------------------------------
-# - Nombre: ./xplico2.sh 
+# - Name: ./xplico2.sh 
 # - Version: 1.0
-# - Fecha: 26/11/2011
-# - Creador: Bugtraq-Team
-# - descripción: Este script comprueba el estado del xplico en el conky
+# - Date: November 26th, 2011
+# - Creator: Bugtraq-Team
+# - Description: This script checks the status of Xplico in the Conky
 #------------------------------------------------------------------------------------
-###################################################################################################
+#####################################################################################
 #Xplico
 if ps -ef | grep xplico | grep root > /dev/null 2>&1
         then
