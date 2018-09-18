@@ -1,13 +1,13 @@
 #!/usr/bin/ksh
 #------------------------------------------------------------------------------------
-# - Nombre: ./virtual.sh 
+# - Name: ./virtual.sh 
 # - Version: 1.0
-# - Fecha: 26/11/2011
-# - Creador: Bugtraq-Team
-# - descripción: Este script comprueba el estado del virtual box en el conky
+# - Date: November 26th, 2011
+# - Creator: Bugtraq-Team
+# - Description: This checks the status of VirtualBox in the conky
 #------------------------------------------------------------------------------------
-###################################################################################################
-#Virtualbox
+#####################################################################################
+#VirtualBox
 if /etc/init.d/virtualbox status | grep "not loaded" > /dev/null 2>&1
  then
   print '${color red}[DOWN]'
