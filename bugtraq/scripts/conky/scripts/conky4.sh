@@ -1,11 +1,10 @@
 #!/usr/bin/ksh
 #------------------------------------------------------------------------------------
-# - Nombre: ./conky4.sh 
+# - Name: ./conky.sh 
 # - Version: 1.0
-# - Fecha: 26/11/2011
-# - Creador: Bugtraq-Team
-# - descripción: Este script comprueba el estado de los servicios de bugtraq
-#     en el conky
+# - Date: November 26th, 2011
+# - Creator: Bugtraq-Team
+# - Description: This script checks the status of all bugtraq services in the conky
 #------------------------------------------------------------------------------------
 ###################################################################################################
 #Apache2
