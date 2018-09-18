@@ -1,12 +1,12 @@
 #!/usr/bin/ksh
 #------------------------------------------------------------------------------------
-# - Nombre: ./privoxy.sh 
+# - Name: ./polipo.sh 
 # - Version: 1.0
-# - Fecha: 26/11/2011
-# - Creador: Bugtraq-Team
-# - descripción: Este script comprueba el estado de privoxy en el conky
+# - Date: November 26th, 2011
+# - Creator: Bugtraq-Team
+# - Description: This checks the status of Polipo in the conky
 #------------------------------------------------------------------------------------
-###################################################################################################
+#####################################################################################
 #Polipo
 ps -ef | grep polipo > /tmp/polipo.txt
 if cat /tmp/polipo.txt | grep "proxy" > /dev/null 2>&1
