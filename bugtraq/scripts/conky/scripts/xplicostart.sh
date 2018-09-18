@@ -1,12 +1,12 @@
 #!/usr/bin/ksh
 #------------------------------------------------------------------------------------
-# - Nombre: ./xplicostart.sh 
+# - Name: ./xplicostart.sh 
 # - Version: 1.0
-# - Fecha: 26/11/2011
-# - Creador: Bugtraq-Team
-# - descripción: Este script comprueba el estado del xplico en el conky
+# - Date: November 26th, 2011
+# - Creator: Bugtraq-Team
+# - Description: This checks the status of Xplico then starts the Service with Apache2
 #------------------------------------------------------------------------------------
-###################################################################################################
+#####################################################################################
 #Xplico
 if /etc/init.d/apache2 status | grep "NOT running" > /dev/null 2>&1
 	then
