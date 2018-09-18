@@ -1,12 +1,12 @@
 #!/usr/bin/ksh
 #------------------------------------------------------------------------------------
-# - Nombre: ./ness.sh 
+# - Name: ./ness.sh 
 # - Version: 1.0
-# - Fecha: 26/11/2011
-# - Creador: Bugtraq-Team
-# - descripción: Este script comprueba el estado del nessus en el conky
+# - Date: November 26th, 2011
+# - Creator: Bugtraq-Team
+# - Description: This checks the status of Nessus in the conky
 #------------------------------------------------------------------------------------
-###################################################################################################
+#####################################################################################
 #Nessus
 if [ -f /opt/nessus/bin/nessus ]
  then
