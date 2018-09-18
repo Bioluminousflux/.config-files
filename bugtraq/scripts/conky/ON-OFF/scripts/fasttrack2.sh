@@ -1,13 +1,13 @@
 #!/usr/bin/ksh
 #------------------------------------------------------------------------------------
-# - Nombre: ./fasttrack2.sh 
+# - Name: ./fasttrack2.sh 
 # - Version: 1.0
-# - Fecha: 26/11/2011
-# - Creador: Bugtraq-Team
-# - descripción: Este script comprueba el estado del fasttrack en el conky
+# - Date: November 26th, 2011
+# - Creator: Bugtraq-Team
+# - Description: This script checks the status of Fast-Track in the Conky
 #------------------------------------------------------------------------------------
-#####################################################
-#fast-track
+#####################################################################################
+#Fast-Track
 ps -ef | grep "fast-track" > /tmp/tmp.txt
 if grep "python fast-track.py" /tmp/tmp.txt > /dev/null 2>&1;
 	then
