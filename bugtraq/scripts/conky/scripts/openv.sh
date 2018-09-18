@@ -1,13 +1,13 @@
-#!/usr/bin/ksh
+!/usr/bin/ksh
 #------------------------------------------------------------------------------------
-# - Nombre: ./openv.sh 
+# - Name: ./openv.sh 
 # - Version: 1.0
-# - Fecha: 26/11/2011
-# - Creador: Bugtraq-Team
-# - descripción: Este script comprueba el estado del openvas en el conky
-#-----------------------------------------------------------------------------------
-###################################################################################################
-#Openvas
+# - Date: November 26th, 2011
+# - Creator: Bugtraq-Team
+# - Description: This checks the status of OpenVAS in the conky
+#------------------------------------------------------------------------------------
+#####################################################################################
+#OpenVAS
 if [ -f /usr/sbin/openvasad ]
  then
    ps -ef | grep "openvas" > /tmp/tmp.txt
