@@ -1,5 +1,13 @@
 #!/bin/bash
-
+#------------------------------------------------------------------------------------
+# - Name: ./openvas_Start.sh 
+# - Version: 1.0
+# - Date: November 26th, 2011
+# - Creator: Bugtraq-Team
+# - Description: This script starts the OpenVAS Service
+#------------------------------------------------------------------------------------
+#####################################################################################
+#OpenVAS
 sudo killall openvassd
 sleep 5
 sudo /etc/init.d/openvas-scanner start
