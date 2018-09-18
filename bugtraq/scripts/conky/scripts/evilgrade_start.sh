@@ -1,6 +1,6 @@
 #!/usr/bin/ksh
 #------------------------------------------------------------------------------------
-# - Name: ./evilgrade.sh 
+# - Name: ./evilgrade_start.sh 
 # - Version: 1.0
 # - Date: November 26th, 2011
 # - Creator: Bugtraq-Team
