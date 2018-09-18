@@ -1,12 +1,13 @@
 #!/usr/bin/ksh
 #------------------------------------------------------------------------------------
-# - Nombre: ./avira2.sh 
+# - Name: ./avira2.sh 
 # - Version: 1.0
-# - Fecha: 26/11/2011
-# - Creador: Bugtraq-Team
-# - descripción: Este script comprueba el estado el avast en el conky
-#####################################################
-#AVAST
+# - Date: November 26th, 2011
+# - Creator: Bugtraq-Team
+# - Description: This script checks the status of Avira in the Conky
+#------------------------------------------------------------------------------------
+###################################################################################################
+#Avira
 if [ -f /usr/lib/AntiVir/guard/avscan ]
 then
 ps -ef | grep "guard" > /tmp/tmp.txt
