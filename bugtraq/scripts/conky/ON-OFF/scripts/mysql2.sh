@@ -1,12 +1,13 @@
 #!/usr/bin/ksh
 #------------------------------------------------------------------------------------
-# - Nombre: ./myaql2.sh 
+# - Name: ./mysql2.sh 
 # - Version: 1.0
-# - Fecha: 26/11/2011
-# - Creador: Bugtraq-Team
-# - descripción: Este script comprueba el estado del mysql en el conky
+# - Date: November 26th, 2011
+# - Creator: Bugtraq-Team
+# - Description: This script checks the status of MySQL in the Conky
 #------------------------------------------------------------------------------------
-#mysql
+#####################################################################################
+#MySQL
 if /etc/init.d/mysql status | grep "running" > /dev/null 2>&1
 
         then
