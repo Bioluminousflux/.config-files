@@ -1,13 +1,13 @@
 #!/usr/bin/ksh
 #------------------------------------------------------------------------------------
-# - Nombre: ./greenbone.sh 
+# - Name: ./greenbone2.sh 
 # - Version: 1.0
-# - Fecha: 26/11/2011
-# - Creador: Bugtraq-Team
-# - descripción: Este script comprueba el estado del greenbone en el conky
+# - Date: November 26th, 2011
+# - Creator: Bugtraq-Team
+# - Description: This script checks the status of Greenbone in the Conky
 #------------------------------------------------------------------------------------
-###################################################################################################
-#greenbone
+#####################################################################################
+#Greenbone
 /etc/init.d/greenbone-security-assistant status | grep "Greenbone" > /tmp/tmp.txt
 if grep "Greenbone Security Assistant is running" /tmp/tmp.txt > /dev/null 2>&1
 	then
