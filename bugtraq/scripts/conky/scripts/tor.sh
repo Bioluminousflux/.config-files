@@ -1,12 +1,12 @@
 #!/usr/bin/ksh
 #------------------------------------------------------------------------------------
-# - Nombre: ./tor.sh 
+# - Name: ./tor.sh 
 # - Version: 1.0
-# - Fecha: 26/11/2011
-# - Creador: Bugtraq-Team
-# - descripción: Este script comprueba el estado de tor en el conky
+# - Date: November 26th, 2011
+# - Creator: Bugtraq-Team
+# - Description: This checks the status of TOR in the conky
 #------------------------------------------------------------------------------------
-###################################################################################################
+#####################################################################################
 #TOR
 ps -ef | grep "tor" > /tmp/tmp.txt
 if grep "/usr/sbin/tor" /tmp/tmp.txt > /dev/null 2>&1;
