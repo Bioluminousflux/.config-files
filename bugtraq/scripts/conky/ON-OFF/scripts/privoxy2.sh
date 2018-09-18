@@ -1,12 +1,12 @@
 #!/usr/bin/ksh
 #------------------------------------------------------------------------------------
-# - Nombre: ./privoxy2.sh 
+# - Name: ./privoxy2.sh 
 # - Version: 1.0
-# - Fecha: 26/11/2011
-# - Creador: Bugtraq-Team
-# - descripción: Este script comprueba el estado de privoxy en el conky
+# - Date: November 26th, 2011
+# - Creator: Bugtraq-Team
+# - Description: This script checks the status of Privoxy in the Conky
 #------------------------------------------------------------------------------------
-###################################################################################################
+#####################################################################################
 #Privoxy
 if /etc/init.d/privoxy status | grep "is not running" > /dev/null 2>&1
 
