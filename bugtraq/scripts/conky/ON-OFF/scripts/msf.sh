@@ -1,12 +1,12 @@
 #!/usr/bin/ksh
 #------------------------------------------------------------------------------------
-# - Nombre: ./metasploit.sh 
+# - Name: ./msf.sh 
 # - Version: 1.0
-# - Fecha: 26/11/2011
-# - Creador: Bugtraq-Team
-# - descripción: Este script comprueba el estado del metsasploit en el conky
+# - Date: November 26th, 2011
+# - Creator: Bugtraq-Team
+# - Description: This script checks the status of Metasploit in the Conky
 #------------------------------------------------------------------------------------
-###################################################################################################
+#####################################################################################
 #Metasploit
 ps -ef | grep "metasploit" > /tmp/tmp.txt
 if grep "/opt/metasploit" /tmp/tmp.txt > /dev/null 2>&1;
