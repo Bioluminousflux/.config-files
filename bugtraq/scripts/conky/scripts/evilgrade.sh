@@ -1,13 +1,13 @@
 #!/usr/bin/ksh
 #------------------------------------------------------------------------------------
-# - Nombre: ./evilgrade.sh 
+# - Name: ./evilgrade.sh 
 # - Version: 1.0
-# - Fecha: 26/11/2011
-# - Creador: Bugtraq-Team
-# - descripción: Este script comprueba el estado del evilgrade en el conky
+# - Date: November 26th, 2011
+# - Creator: Bugtraq-Team
+# - Description: This script checks the status of Evilgrade in the conky
 #------------------------------------------------------------------------------------
-#####################################################
-#evilgrade
+#####################################################################################
+#Evilgrade
 ps -ef | grep "evilgrade" > /tmp/tmp.txt
 if grep "/usr/bin/perl ./evilgrade" /tmp/tmp.txt > /dev/null 2>&1;
 	then
