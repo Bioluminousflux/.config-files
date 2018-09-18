@@ -1,12 +1,13 @@
 #!/usr/bin/ksh
 #------------------------------------------------------------------------------------
-# - Nombre: ./mysql.sh 
+# - Name: ./mysql.sh 
 # - Version: 1.0
-# - Fecha: 26/11/2011
-# - Creador: Bugtraq-Team
-# - descripción: Este script comprueba el estado de mysql en el conky
+# - Date: November 26th, 2011
+# - Creator: Bugtraq-Team
+# - Description: This checks the status of MySQL in the conky
 #------------------------------------------------------------------------------------
-#mysql
+#####################################################################################
+#MySQL
 if ps -ef | grep mysql | grep 3306 > /dev/null 2>&1
 
 	then
