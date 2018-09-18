@@ -1,12 +1,12 @@
 #!/usr/bin/ksh
 #------------------------------------------------------------------------------------
-# - Nombre: ./jondo.sh 
+# - Name: ./jondo.sh 
 # - Version: 1.0
-# - Fecha: 26/11/2011
-# - Creador: Bugtraq-Team
-# - descripción: Este script comprueba el estado de tor en el conky
+# - Date: November 26th, 2011
+# - Creator: Bugtraq-Team
+# - Description: This checks the status of Jondo in the conky
 #------------------------------------------------------------------------------------
-###################################################################################################
+#####################################################################################
 #Jondo
 ps -ef | grep "JAP" > /tmp/tmp.txt
 if grep "/usr/share/java/JAP" /tmp/tmp.txt > /dev/null 2>&1;
