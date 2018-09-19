@@ -1,3 +1,9 @@
+--[[
+#=====================================================================================
+#                     
+#				                           Bioluminousflux
+#======================================================================================
+]]
 conky.config = {
 
 --Various settings
@@ -77,7 +83,17 @@ ${alignc}D I S K
 ${goto 60}Used${alignr}Size
 #Boot${goto 60}${fs_used /boot}${alignr}${fs_size /boot}
 Root${goto 60}${fs_used /}${alignr}${fs_size /}
+#Swap${goto 60}${fs_used swap}${alignr}${fs_size swap}
 #Home${goto 60}${fs_used /home}${alignr}${fs_size /home}
+#Tmp${goto 60}${fs_used /tmp}${alignr}${fs_size /tmp}
+#Etc${goto 60}${fs_used /etc}${alignr}${fs_size /etc}
+#Usr${goto 60}${fs_used /usr}${alignr}${fs_size /usr}
+#Opt${goto 60}${fs_used /opt}${alignr}${fs_size /opt}
+#Var${goto 60}${fs_used /var}${alignr}${fs_size /var}
+#Bin${goto 60}${fs_used /bin}${alignr}${fs_size /bin}
+#Sbin${goto 60}${fs_used /sbin}${alignr}${fs_size /sbin}
+#Dev${goto 60}${fs_used /Dev}${alignr}${fs_size /Dev}
+#Lib${goto 60}${fs_used /lib}${alignr}${fs_size /lib}
 
 ${hr}
 ${alignc}M E M O R Y
