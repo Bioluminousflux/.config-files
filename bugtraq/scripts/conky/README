@@ -1,5 +1,40 @@
-#xdotool + libreria
+###  Requirements  ###
+
+# xdotool + libreria
 sudo aptitude install xdotool
 
-#Conky
+# Conky
 sudo aptitude install conky-all
+
+
+
+#################  Start Instructions #################
+ 
+    If not present:  mkdir ~/.config/conky
+                 Place in: ~/.config/conky
+
+
+
+#################  XFWM4 Panel Launcher  #################
+#         Launch File: ~/conky/bugtraq/conky/scripts/.conkyrc
+#         Source Dir:  ~/conky/bugtraq/conky/
+#
+
+
+#################  BLANK WM Panel Launcher  #################
+#        
+#     
+#
+
+
+#################  BLANK WM Panel Launcher  #################
+#        
+#     
+#
+
+
+#################  BLANK WM Panel Launcher  #################
+#        
+#     
+#
+
