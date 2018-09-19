@@ -1,12 +1,9 @@
 --[[
 #=====================================================================================
-#                               
-#				Custom Bioluminousflux
-#
+#                     
+#				  Bioluminousflux
 #======================================================================================
-
 ]]
-
 conky.config = {
 
 	--Various settings
@@ -116,11 +113,11 @@ ${color2}Distro:${color}${alignr} ${alignr}${execi 6000 lsb_release -d | grep 'D
 ${color2}Kernel:${color}${alignr}${exec uname} ${exec uname -r}
 ${color2}Uptime:${color} ${alignr}${uptime}
 ${color2}UTC:${color}${alignr}${utime %H:%M %p}
-Battery:${alignr}${battery}
+${color2}Battery:${alignr}${battery}
 ${color2}Users Logged In: ${color}${alignr}${user_number}
 ${color2}Usernames: ${color}${alignr}${user_names}
 ${alignc}${color2}Desktop ${color}${alignc}${desktop}
-${color2}Package Updates: ${alignc}${color}${execi 3600 checkupdates | wc -l}
+${color2}Updates Available: ${alignc}${color}${execi 3600 checkupdates | wc -l}
 
 ${color5}${color5}${font Roboto:size=10}N E T W O R K   ${hr 2}${font}${color}
 
