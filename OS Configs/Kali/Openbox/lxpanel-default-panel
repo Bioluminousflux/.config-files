@@ -1,0 +1,51 @@
+# lxpanel <profile> config file. Manually editing is not recommended.
+# Use preference dialog in lxpanel to adjust config when you can.
+
+Global {
+  edge=top
+  allign=left
+  margin=0
+  widthtype=request
+  width=1366
+  height=30
+  transparent=1
+  tintcolor=#000000
+  alpha=255
+  setdocktype=1
+  setpartialstrut=1
+  usefontcolor=0
+  fontcolor=#ffffff
+  usefontsize=1
+  fontsize=12
+  background=0
+  backgroundfile=/usr/share/lxpanel/images/background.png
+  autohide=0
+  heightwhenhidden=2
+  align=left
+  iconsize=28
+}
+Plugin {
+  type=space
+  Config {
+    Size=1
+  }
+}
+Plugin {
+  type=menu
+  Config {
+    image=/usr/share/kali-defaults/web/kali-site-logo.png
+    system {
+    }
+    separator {
+    }
+    item {
+      command=run
+    }
+    separator {
+    }
+    item {
+      image=gnome-logout
+      command=logout
+    }
+  }
+}
