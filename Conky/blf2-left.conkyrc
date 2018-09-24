@@ -119,6 +119,11 @@ ${color2}Usernames: ${color}${alignr}${user_names}
 ${alignc}${color2}Desktop ${color}${alignc}${desktop}
 ${color2}Updates Available: ${alignc}${color}${execi 3600 checkupdates | wc -l}
 
+${color5}${color5}${font Roboto:size=10}E N T R O P Y   ${hr 2}${font}${color}
+
+${color2}Available:${alignr}${color}${entropy_avail}/${color2}${entropy_poolsize} Bits
+${color}${entropy_bar 10,200}${alignr}${entropy_perc}%
+
 ${color5}${color5}${font Roboto:size=10}N E T W O R K   ${hr 2}${font}${color}
 
 ${if_up wlo1}${color2}${alignc}Wireless
@@ -234,10 +239,5 @@ ${goto 50}${color2}${tcp_portmon 1 65535 rip 11}${alignr 1}${tcp_portmon 1 65535
 ${goto 50}${color2}${tcp_portmon 1 65535 rip 12}${alignr 1}${tcp_portmon 1 65535 rport 12}
 ${goto 50}${color2}${tcp_portmon 1 65535 rip 13}${alignr 1}${tcp_portmon 1 65535 rport 13}
 ${goto 50}${color2}${tcp_portmon 1 65535 rip 14}${alignr 1}${tcp_portmon 1 65535 rport 14}
-
-${color5}${color5}${font Roboto:size=10}E N T R O P Y   ${hr 2}${font}${color}
-
-${color2}Available:${alignr}${color}${entropy_avail}/${color2}${entropy_poolsize} Bits
-${color}${entropy_bar 10,200}${alignr}${entropy_perc}%
 ]];
 
