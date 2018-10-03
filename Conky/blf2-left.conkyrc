@@ -114,10 +114,10 @@ ${color2}Kernel:${color}${alignr}${exec uname} ${exec uname -r}
 ${color2}Uptime:${color} ${alignr}${uptime}
 ${color2}UTC:${color}${alignr}${utime %H:%M %p}
 ${color2}Battery:${alignr}${battery}
-${color2}Users Logged In: ${color}${alignr}${user_number}
-${color2}Usernames: ${color}${alignr}${user_names}
-${alignc}${color2}Desktop ${color}${alignc}${desktop}
-${color2}Updates Available: ${alignc}${color}${execi 3600 checkupdates | wc -l}
+#${color2}Users Logged In: ${color}${alignr}${user_number}
+#${color2}Usernames: ${color}${alignr}${user_names}
+#${alignc}${color2}Desktop ${color}${alignc}${desktop}
+#${color2}Updates Available: ${alignc}${color}${execi 3600 checkupdates | wc -l}
 
 ${color5}${color5}${font Roboto:size=10}E N T R O P Y   ${hr 2}${font}${color}
 
@@ -133,7 +133,7 @@ ${color2}${offset 5}BSSID: ${color}${wireless_ap wlo1} ${color2}${alignr}Mode: $
 ${color2}${offset 5}Gateway: ${color}${gw_ip wlo1} ${color2}${alignr}Route: ${color}${gw_iface wlo1}
 ${color2}${offset 5}Down: ${color}${downspeed wlo1} ${color2}${alignr}Up: ${color}${upspeed wlo1} $color
 ${color2}${offset 5}${downspeedgraph wlo1 25,140 000000 970300} ${alignr}${upspeedgraph wlo1 25,140 000000 297F00}$color
-${color2}${offset 5}Total: ${color}${totaldown wlo1} ${color2}${alignr}Total: ${color}${totalup wlo1}$color$endi${if_up wlo2}${color2}${alignc}Wireless
+${color2}${offset 5}Total: ${color}${totaldown wlo1} ${color2}${alignr}Total: ${color}${totalup wlo1}$color$endif${if_up wlo2}${color2}${alignc}Wireless
 ${color2}${offset 5}IP: ${color}${addr wlo2}${alignr}${color2}Quality: ${color}${wireless_link_qual_perc wlo2}%
 ${color2}${offset 5}ESSID: ${color}${wireless_essid wlo2} ${color2}${alignr}Rate: ${color}${wireless_bitrate wlo2}
 ${color2}${offset 5}BSSID: ${color}${wireless_ap wlo2} ${color2}${alignr}Mode: ${color}${wireless_mode wlo2}
@@ -153,7 +153,7 @@ ${color2}${offset 5}ESSID: ${color}${wireless_essid wlan0} ${color2}${alignr}Rat
 ${color2}${offset 5}BSSID: ${color}${wireless_ap wlan0} ${color2}${alignr}Mode: ${color}${wireless_mode wlan0}
 ${color2}${offset 5}Gateway: ${color}${gw_ip wlan0} ${color2}${alignr}Route: ${color}${gw_iface wlan0}
 ${color2}${offset 5}Down: ${color}${downspeed wlan0} ${color2}${alignr}Up: ${color}${upspeed wlan0} $color
-${color2}${offset 5}${downspeedgraph wlan0 25,140 000000 970300} ${alignr}${upspeedgraph wlan0 25,140 000000 297F00}$color$endif
+${color2}${offset 5}${downspeedgraph wlan0 25,140 000000 970300} ${alignr}${upspeedgraph wlan0 25,140 000000 297F00}$color
 ${color2}${offset 5}Total: ${color}${totaldown wlan0} ${color2}${alignr}Total: ${color}${totalup wlan0}$color$endif${if_up wlan1}${color2}${alignc}Wireless
 ${color2}${offset 5}IP: ${color}${addr wlan1}${alignr}${color2}Quality: ${color}${wireless_link_qual_perc wlan1}%
 ${color2}${offset 5}ESSID: ${color}${wireless_essid wlan1} ${color2}${alignr}Rate: ${color}${wireless_bitrate wlan1}
@@ -169,7 +169,6 @@ ${color2}${offset 5}Gateway: ${color}${gw_ip wlan2} ${color2}${alignr}Route: ${c
 ${color2}${offset 5}Down: ${color}${downspeed wlan2} ${color2}${alignr}Up: ${color}${upspeed wlan2} $color
 ${color2}${offset 5}${downspeedgraph wlan2 25,140 000000 970300} ${alignr}${upspeedgraph wlan2 25,140 000000 297F00}$color
 ${color2}${offset 5}Total: ${color}${totaldown wlan2} ${color2}${alignr}Total: ${color}${totalup wlan2}$color$endif
-
 ${if_up eno1}${color2}${alignc}Ethernet
 ${color2}${offset 5}IP: ${color}${addr eno1}${alignr}${color2}Quality: ${color}${wireless_link_qual_perc eno1}%
 ${color2}${offset 5}ESSID: ${color}${wireless_essid eno1} ${color2}${alignr}Rate: ${color}${wireless_bitrate eno1}
@@ -213,31 +212,28 @@ ${color2}${offset 5}Gateway: ${color}${gw_ip eth2} ${color2}${alignr}Route: ${co
 ${color2}${offset 5}Down: ${color}${downspeed eth2} ${color2}${alignr}Up: ${color}${upspeed eth2} $color
 ${color2}${offset 5}${downspeedgraph eth2 25,140 000000 970300} ${alignr}${upspeedgraph eth2 25,140 000000 297F00}$color
 ${color2}${offset 5}Total: ${color}${totaldown eth2} ${color2}${alignr}Total: ${color}${totalup eth2}$color$endif
-
 ${if_up lo}${color2}${alignc}Loopback
 ${color2}${offset 5}IP: ${color}${addr lo}${alignr}${color2}
 ${color2}${offset 5}Gateway: ${color}${gw_ip lo} ${color2}${alignr}Route: ${color}${gw_iface lo}
 ${color2}${offset 5}Down: ${color}${downspeed lo} ${color2}${alignr}Up: ${color}${upspeed lo} $color
 ${color2}${offset 5}Total: ${color}${totaldown lo} ${color2}${alignr}Total: ${color}${totalup lo}$color$endif
 ${color2}${offset 30}WiFi Upload:${color} ${alignr}${offset -10$}${upspeed wlo1}${alignr}${upspeedgraph wlo1 8,100}
-${color2}${offset 30}WiFi Download:${color} ${alignr}${offset -10$}${downspeed wlo1}${alignr}${downspeedgraph wlo1 8,100}
-
-${goto 50}${color}Open Ports:${color1}   ${tcp_portmon 1 65535 count}
-${goto 50}${color}${offset 10}IP${alignr}DPORT
-${goto 50}${color2}${tcp_portmon 1 65535 rip  0}${alignr 1}${tcp_portmon 1 65535 rport  0}
-${goto 50}${color2}${tcp_portmon 1 65535 rip  1}${alignr 1}${tcp_portmon 1 65535 rport  1}
-${goto 50}${color2}${tcp_portmon 1 65535 rip  2}${alignr 1}${tcp_portmon 1 65535 rport  2}
-${goto 50}${color2}${tcp_portmon 1 65535 rip  3}${alignr 1}${tcp_portmon 1 65535 rport  3}
-${goto 50}${color2}${tcp_portmon 1 65535 rip  4}${alignr 1}${tcp_portmon 1 65535 rport  4}
-${goto 50}${color2}${tcp_portmon 1 65535 rip  5}${alignr 1}${tcp_portmon 1 65535 rport  5}
-${goto 50}${color2}${tcp_portmon 1 65535 rip  6}${alignr 1}${tcp_portmon 1 65535 rport  6}
-${goto 50}${color2}${tcp_portmon 1 65535 rip  7}${alignr 1}${tcp_portmon 1 65535 rport  7}
-${goto 50}${color2}${tcp_portmon 1 65535 rip  8}${alignr 1}${tcp_portmon 1 65535 rport  8}
-${goto 50}${color2}${tcp_portmon 1 65535 rip  9}${alignr 1}${tcp_portmon 1 65535 rport  9}
-${goto 50}${color2}${tcp_portmon 1 65535 rip 10}${alignr 1}${tcp_portmon 1 65535 rport 10}
-${goto 50}${color2}${tcp_portmon 1 65535 rip 11}${alignr 1}${tcp_portmon 1 65535 rport 11}
-${goto 50}${color2}${tcp_portmon 1 65535 rip 12}${alignr 1}${tcp_portmon 1 65535 rport 12}
-${goto 50}${color2}${tcp_portmon 1 65535 rip 13}${alignr 1}${tcp_portmon 1 65535 rport 13}
-${goto 50}${color2}${tcp_portmon 1 65535 rip 14}${alignr 1}${tcp_portmon 1 65535 rport 14}
+${color2}${offset 30}WiFi Download:${color} ${alignr}${offset -10$}${downspeed wlo1}${alignr}${downspeedgraph wlo1 8,100}#${goto 50}${color}Open Ports:${color1}   ${tcp_portmon 1 65535 count}
+#${goto 50}${color}${offset 10}IP${alignr}DPORT
+#${goto 50}${color2}${tcp_portmon 1 65535 rip  0}${alignr 1}${tcp_portmon 1 65535 rport  0}
+#${goto 50}${color2}${tcp_portmon 1 65535 rip  1}${alignr 1}${tcp_portmon 1 65535 rport  1}
+#${goto 50}${color2}${tcp_portmon 1 65535 rip  2}${alignr 1}${tcp_portmon 1 65535 rport  2}
+#${goto 50}${color2}${tcp_portmon 1 65535 rip  3}${alignr 1}${tcp_portmon 1 65535 rport  3}
+#${goto 50}${color2}${tcp_portmon 1 65535 rip  4}${alignr 1}${tcp_portmon 1 65535 rport  4}
+#${goto 50}${color2}${tcp_portmon 1 65535 rip  5}${alignr 1}${tcp_portmon 1 65535 rport  5}
+#${goto 50}${color2}${tcp_portmon 1 65535 rip  6}${alignr 1}${tcp_portmon 1 65535 rport  6}
+#${goto 50}${color2}${tcp_portmon 1 65535 rip  7}${alignr 1}${tcp_portmon 1 65535 rport  7}
+#${goto 50}${color2}${tcp_portmon 1 65535 rip  8}${alignr 1}${tcp_portmon 1 65535 rport  8}
+#${goto 50}${color2}${tcp_portmon 1 65535 rip  9}${alignr 1}${tcp_portmon 1 65535 rport  9}
+#${goto 50}${color2}${tcp_portmon 1 65535 rip 10}${alignr 1}${tcp_portmon 1 65535 rport 10}
+#${goto 50}${color2}${tcp_portmon 1 65535 rip 11}${alignr 1}${tcp_portmon 1 65535 rport 11}
+#${goto 50}${color2}${tcp_portmon 1 65535 rip 12}${alignr 1}${tcp_portmon 1 65535 rport 12}
+#${goto 50}${color2}${tcp_portmon 1 65535 rip 13}${alignr 1}${tcp_portmon 1 65535 rport 13}
+#${goto 50}${color2}${tcp_portmon 1 65535 rip 14}${alignr 1}${tcp_portmon 1 65535 rport 14}
 ]];
 
