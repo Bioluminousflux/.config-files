@@ -193,11 +193,9 @@ ${color2}${offset 5}${downspeedgraph eno3 25,140 000000 970300} ${alignr}${upspe
 ${color2}${offset 5}Total: ${color}${totaldown eno3} ${color2}${alignr}Total: ${color}${totalup eno3}$color$endif$
 
 
-{if_up eth0}${color2}${alignc}Ethernet
-${color2}${offset 5}IP: ${color}${addr eth0}${alignr}${color2}Quality: ${color}${wireless_link_qual_perc eth0}%
-${color2}${offset 5}ESSID: ${color}${wireless_essid eth0} ${color2}${alignr}Rate: ${color}${wireless_bitrate eth0}
-${color2}${offset 5}BSSID: ${color}${wireless_ap eth0} ${color2}${alignr}Mode: ${color}${wireless_mode eth0}
-${color2}${offset 5}Gateway: ${color}${gw_ip eth0} ${color2}${alignr}Route: ${color}${gw_iface eth0}
+${if_up eth0}${color2}${alignc}Ethernet
+${color2}${offset 5}IP: ${color}${addr eth0}${alignr}${color2}${color2}${alignr}Route: ${color}${gw_iface eth0}
+${color2}${offset 5}Gateway: ${color}${gw_ip eth0} ${color2}${alignr}
 ${color2}${offset 5}Down: ${color}${downspeed eth0} ${color2}${alignr}Up: ${color}${upspeed eth0} $color
 ${color2}${offset 5}${downspeedgraph eth0 25,140 000000 970300} ${alignr}${upspeedgraph eth0 25,140 000000 297F00}$color
 ${color2}${offset 5}Total: ${color}${totaldown eth0} ${color2}${alignr}Total: ${color}${totalup eth0}$color$endif
