@@ -164,7 +164,6 @@ ${color2}${offset 5}Gateway: ${color}${gw_ip wlan2} ${color2}${alignr}Route: ${c
 ${color2}${offset 5}Down: ${color}${downspeed wlan2} ${color2}${alignr}Up: ${color}${upspeed wlan2} $color
 ${color2}${offset 5}${downspeedgraph wlan2 25,140 000000 970300} ${alignr}${upspeedgraph wlan2 25,140 000000 297F00}$color
 ${color2}${offset 5}Total: ${color}${totaldown wlan2} ${color2}${alignr}Total: ${color}${totalup wlan2}$color$endif
-
 ${if_up eno1}${color2}${alignc}Ethernet
 ${color2}${offset 5}IP: ${color}${addr eno1}${alignr}${color2}${alignr}Route: ${color}${gw_iface eno1}
 ${color2}${offset 5}Gateway: ${color}${gw_ip eno1} ${color2}${alignr}
