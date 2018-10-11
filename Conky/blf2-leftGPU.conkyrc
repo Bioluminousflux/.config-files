@@ -113,6 +113,7 @@ ${color5}${font Roboto:size=10}${voffset 2}S Y S T E M   ${hr 2}${font}${color}
 ${color2}${voffset 8}Hostname:${color} ${alignr}${nodename}
 ${color2}Distro:${color}${alignr}${alignr}${execi 6000 lsb_release -d | grep 'Description'|awk {'print $2""$3""$4""$5'}}
 ${color2}Kernel:${color}${alignr}${exec uname} ${exec uname -r}
+${color2}GPU:${color}${alignr}${execi 6000 lspci -k | grep -EA3 'VGA|3D|Display'}
 ${color2}Nvidia: ${color}${alignr}${execp nvidia-smi --query-supported-clocks=gpu_name --format=csv,noheader}
 ${color2}Nvidia Driver: ${color}${alignr}${execi 60000 nvidia-smi | grep "Driver Version"| awk {'print $3'}}
 ${color2}Uptime:${color} ${alignr}${uptime}
@@ -222,9 +223,17 @@ ${color2}${offset 5}Total: ${color}${totaldown lo} ${color2}${alignr}Total: ${co
 
 ${color5}${color5}${font Roboto:size=10}N V I D I A   ${hr 2}${font}${color}
 ${color2}${font Roboto:size=10,weight:bold}${alignc}${color}${execp nvidia-smi --query-supported-clocks=gpu_name --format=csv,noheader}
-${color2}GPU Temp: ${color}${alignr}${execi 60 nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader} °C
+${color2}GPU Temp: ${color}${alignr}${execi 60 nvidia-settings --query-gpu=temperature.gpu --format=csv,noheader} °C
 ${color2}Fan Speed: ${color}${alignr}${execi 60 nvidia-settings -q [fan:0]/GPUCurrentFanSpeed -t} %
 ${color2}GPU Clock: ${color}${alignr}${execi 60 nvidia-settings --query-gpu=CurrentClockFreqs.gpu | grep -m 1 Attribute | awk '{print $4}' | sed -e 's/\.//' | cut -d, -f1} MHz
 ${color2}Mem Clock: ${color}${alignr}${execi 86400 nvidia-settings -q all| grep -m 1 GPUCurrentProcessorClockFreqs | awk '{print $4}' | sed 's/.$//'} MHz
 ${color2}Mem Used: ${color}${alignr}${execi 60 nvidia-settings -q [gpu:0]/UsedDedicatedGPUMemory -t} / ${exec nvidia-settings -q [gpu:0]/TotalDedicatedGPUMemory -t} MiB0
+
+${color5}${color5}${font Roboto:size=10}A M D   ${hr 2}${font}${color}
+#Requires 
+#aticonfig --odgc --odgt
+
+${color5}${color5}${font Roboto:size=10}I N T E L   ${hr 2}${font}${color}
+#Requires intel_GPU_tools
+#intel_gpu_top
 ]];
