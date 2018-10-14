@@ -200,16 +200,71 @@ ${color2}${offset 5}Gateway: ${color}${gw_ip eth3} ${color2}${alignr}
 ${color2}${offset 5}Down: ${color}${downspeed eth3} ${color2}${alignr}Up: ${color}${upspeed eth3} $color
 ${color2}${offset 5}${downspeedgraph eth3 25,140 000000 970300} ${alignr}${upspeedgraph eth3 25,140 000000 297F00}$color
 ${color2}${offset 5}Total: ${color}${totaldown eth3} ${color2}${alignr}Total: ${color}${totalup eth3}$color$endif${if_up em1}${color2}${alignc}Ethernet
-${color2}${offset 5}IP: ${color}${addr eno1}${alignr}${color2}${alignr}Route: ${color}${gw_iface em1}
+${color2}${offset 5}IP: ${color}${addr em1}${alignr}${color2}${alignr}Route: ${color}${gw_iface em1}
 ${color2}${offset 5}Gateway: ${color}${gw_ip em1} ${color2}${alignr}
 ${color2}${offset 5}Down: ${color}${downspeed em1} ${color2}${alignr}Up: ${color}${upspeed em1} $color
 ${color2}${offset 5}${downspeedgraph em1 25,140 000000 970300} ${alignr}${upspeedgraph em1 25,140 000000 297F00}$color
-${color2}${offset 5}Total: ${color}${totaldown em1} ${color2}${alignr}Total: ${color}${totalup em1}$color$endif${if_up em2}${color2}${alignc}Ethernet
-${color2}${offset 5}IP: ${color}${addr eno1}${alignr}${color2}${alignr}Route: ${color}${gw_iface em2}
+${color2}${offset 5}Total: ${color}${totaldown em1} ${color2}${alignr}Total: ${color}${totalup em1}$color$endif{if_up em2}${color2}${alignc}Ethernet
+${color2}${offset 5}IP: ${color}${addr em2}${alignr}${color2}${alignr}Route: ${color}${gw_iface em2}
 ${color2}${offset 5}Gateway: ${color}${gw_ip em2} ${color2}${alignr}
 ${color2}${offset 5}Down: ${color}${downspeed em2} ${color2}${alignr}Up: ${color}${upspeed em2} $color
 ${color2}${offset 5}${downspeedgraph em2 25,140 000000 970300} ${alignr}${upspeedgraph em2 25,140 000000 297F00}$color
-${color2}${offset 5}Total: ${color}${totaldown em2} ${color2}${alignr}Total: ${color}${totalup em2}$color$endif
+${color2}${offset 5}Total: ${color}${totaldown em2} ${color2}${alignr}Total: ${color}${totalup em2}$color$endif${if_up em3}${color2}${alignc}Ethernet
+${color2}${offset 5}IP: ${color}${addr em3}${alignr}${color2}${alignr}Route: ${color}${gw_iface em3}
+${color2}${offset 5}Gateway: ${color}${gw_ip em3} ${color2}${alignr}
+${color2}${offset 5}Down: ${color}${downspeed em3} ${color2}${alignr}Up: ${color}${upspeed em3} $color
+${color2}${offset 5}${downspeedgraph em3 25,140 000000 970300} ${alignr}${upspeedgraph em3 25,140 000000 297F00}$color
+${color2}${offset 5}Total: ${color}${totaldown em3} ${color2}${alignr}Total: ${color}${totalup em3}$color$endif${if_up em4}${color2}${alignc}Ethernet
+${color2}${offset 5}IP: ${color}${addr em4}${alignr}${color2}${alignr}Route: ${color}${gw_iface em4}
+${color2}${offset 5}Gateway: ${color}${gw_ip em4} ${color2}${alignr}
+${color2}${offset 5}Down: ${color}${downspeed em4} ${color2}${alignr}Up: ${color}${upspeed em4} $color
+${color2}${offset 5}${downspeedgraph em4 25,140 000000 970300} ${alignr}${upspeedgraph em4 25,140 000000 297F00}$color
+${color2}${offset 5}Total: ${color}${totaldown em4} ${color2}${alignr}Total: ${color}${totalup em4}$color$endif${if_up enp0s1}${color2}${alignc}Ethernet
+${color2}${offset 5}IP: ${color}${addr enp0s1}${alignr}${color2}${alignr}Route: ${color}${gw_iface enp0s1}
+${color2}${offset 5}Gateway: ${color}${gw_ip enp0s1} ${color2}${alignr}
+${color2}${offset 5}Down: ${color}${downspeed enp0s1} ${color2}${alignr}Up: ${color}${upspeed enp0s1} $color
+${color2}${offset 5}${downspeedgraph enp0s1 25,140 000000 970300} ${alignr}${upspeedgraph enp0s1 25,140 000000 297F00}$color
+${color2}${offset 5}Total: ${color}${totaldown enp0s1} ${color2}${alignr}Total: ${color}${totalup enp0s1}$color$endif${if_up enp0s2}${color2}${alignc}Ethernet
+${color2}${offset 5}IP: ${color}${addr enp0s2}${alignr}${color2}${alignr}Route: ${color}${gw_iface enp0s2}
+${color2}${offset 5}Gateway: ${color}${gw_ip enp0s2} ${color2}${alignr}
+${color2}${offset 5}Down: ${color}${downspeed enp0s2} ${color2}${alignr}Up: ${color}${upspeed enp0s2} $color
+${color2}${offset 5}${downspeedgraph enp0s2 25,140 000000 970300} ${alignr}${upspeedgraph enp0s2 25,140 000000 297F00}$color
+${color2}${offset 5}Total: ${color}${totaldown enp0s2} ${color2}${alignr}Total: ${color}${totalup enp0s2}$color$endif${if_up enp0s3}${color2}${alignc}Ethernet
+${color2}${offset 5}IP: ${color}${addr enp0s3}${alignr}${color2}${alignr}Route: ${color}${gw_iface enp0s3}
+${color2}${offset 5}Gateway: ${color}${gw_ip enp0s3} ${color2}${alignr}
+${color2}${offset 5}Down: ${color}${downspeed enp0s3} ${color2}${alignr}Up: ${color}${upspeed enp0s3} $color
+${color2}${offset 5}${downspeedgraph enp0s3 25,140 000000 970300} ${alignr}${upspeedgraph enp0s3 25,140 000000 297F00}$color
+${color2}${offset 5}Total: ${color}${totaldown em4} ${color2}${alignr}Total: ${color}${totalup enp0s3}$color$endif${if_up enp0s4}${color2}${alignc}Ethernet
+${color2}${offset 5}IP: ${color}${addr enp0s4}${alignr}${color2}${alignr}Route: ${color}${gw_iface enp0s4}
+${color2}${offset 5}Gateway: ${color}${gw_ip enp0s4} ${color2}${alignr}
+${color2}${offset 5}Down: ${color}${downspeed enp0s4} ${color2}${alignr}Up: ${color}${upspeed enp0s4} $color
+${color2}${offset 5}${downspeedgraph enp0s4 25,140 000000 970300} ${alignr}${upspeedgraph enp0s4 25,140 000000 297F00}$color
+${color2}${offset 5}Total: ${color}${totaldown enp0s4} ${color2}${alignr}Total: ${color}${totalup enp0s4}$color$endif${if_up enp0s5}${color2}${alignc}Ethernet
+${color2}${offset 5}IP: ${color}${addr enp0s5}${alignr}${color2}${alignr}Route: ${color}${gw_iface enp0s5}
+${color2}${offset 5}Gateway: ${color}${gw_ip enp0s5} ${color2}${alignr}
+${color2}${offset 5}Down: ${color}${downspeed enp0s5} ${color2}${alignr}Up: ${color}${upspeed enp0s5} $color
+${color2}${offset 5}${downspeedgraph enp0s5 25,140 000000 970300} ${alignr}${upspeedgraph enp0s5 25,140 000000 297F00}$color
+${color2}${offset 5}Total: ${color}${totaldown enp0s5} ${color2}${alignr}Total: ${color}${totalup enp0s5}$color$endif${if_up enp0s6}${color2}${alignc}Ethernet
+${color2}${offset 5}IP: ${color}${addr enp0s6}${alignr}${color2}${alignr}Route: ${color}${gw_iface enp0s6}
+${color2}${offset 5}Gateway: ${color}${gw_ip enp0s6} ${color2}${alignr}
+${color2}${offset 5}Down: ${color}${downspeed enp0s6} ${color2}${alignr}Up: ${color}${upspeed enp0s6} $color
+${color2}${offset 5}${downspeedgraph enp0s6 25,140 000000 970300} ${alignr}${upspeedgraph enp0s6 25,140 000000 297F00}$color
+${color2}${offset 5}Total: ${color}${totaldown enp0s6} ${color2}${alignr}Total: ${color}${totalup enp0s6}$color$endif${if_up enp0s7}${color2}${alignc}Ethernet
+${color2}${offset 5}IP: ${color}${addr enp0s7}${alignr}${color2}${alignr}Route: ${color}${gw_iface enp0s7}
+${color2}${offset 5}Gateway: ${color}${gw_ip enp0s7} ${color2}${alignr}
+${color2}${offset 5}Down: ${color}${downspeed enp0s7} ${color2}${alignr}Up: ${color}${upspeed enp0s7} $color
+${color2}${offset 5}${downspeedgraph enp0s7 25,140 000000 970300} ${alignr}${upspeedgraph enp0s7 25,140 000000 297F00}$color
+${color2}${offset 5}Total: ${color}${totaldown enp0s7} ${color2}${alignr}Total: ${color}${totalup enp0s7}$color$endif${if_up enp0s1}${color2}${alignc}Ethernet
+${color2}${offset 5}IP: ${color}${addr em4}${alignr}${color2}${alignr}Route: ${color}${gw_iface em4}
+${color2}${offset 5}Gateway: ${color}${gw_ip em4} ${color2}${alignr}
+${color2}${offset 5}Down: ${color}${downspeed em4} ${color2}${alignr}Up: ${color}${upspeed em4} $color
+${color2}${offset 5}${downspeedgraph em4 25,140 000000 970300} ${alignr}${upspeedgraph em4 25,140 000000 297F00}$color
+${color2}${offset 5}Total: ${color}${totaldown em4} ${color2}${alignr}Total: ${color}${totalup em4}$color$endif${if_up enp0s1}${color2}${alignc}Ethernet
+${color2}${offset 5}IP: ${color}${addr em4}${alignr}${color2}${alignr}Route: ${color}${gw_iface em4}
+${color2}${offset 5}Gateway: ${color}${gw_ip em4} ${color2}${alignr}
+${color2}${offset 5}Down: ${color}${downspeed em4} ${color2}${alignr}Up: ${color}${upspeed em4} $color
+${color2}${offset 5}${downspeedgraph em4 25,140 000000 970300} ${alignr}${upspeedgraph em4 25,140 000000 297F00}$color
+${color2}${offset 5}Total: ${color}${totaldown em4} ${color2}${alignr}Total: ${color}${totalup em4}$color$endif
 ${if_up lo}${color2}${alignc}Loopback
 ${color2}${offset 5}IP: ${color}${addr lo}${alignr}${color2}
 ${color2}${offset 5}Gateway: ${color}${gw_ip lo} ${color2}${alignr}Route: ${color}${gw_iface lo}
