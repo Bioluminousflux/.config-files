@@ -161,17 +161,13 @@ launcher_icon_theme = Tango
 launcher_icon_theme_override = 0
 startup_notifications = 1
 launcher_tooltip = 1
-launcher_item_app = /usr/share/applications/org.gnome.Nautilus.desktop
 launcher_item_app = /usr/share/applications/pcmanfm.desktop
-launcher_item_app = /usr/share/applications/firefox-esr.desktop
 launcher_item_app = /usr/share/applications/org.gnome.Terminal.desktop
 launcher_item_app = /usr/share/applications/lxterminal.desktop
-launcher_item_app = /usr/share/applications/debian-uxterm.desktop
 launcher_item_app = /usr/share/applications/leafpad.desktop
-launcher_item_app = /usr/share/applications/org.gnome.gedit.desktop
+launcher_item_app = /usr/share/applications/geany.desktop
 launcher_item_app = /usr/share/applications/kali-burpsuite.desktop
 launcher_item_app = /usr/share/applications/kali-armitage.desktop
-launcher_item_app = /usr/share/applications/kali-msfconsole.desktop
 launcher_item_app = /usr/share/applications/zenmap-root.desktop
 launcher_item_app = /usr/share/applications/wireshark.desktop
 
@@ -217,10 +213,44 @@ ac_disconnected_cmd =
 button = new
 button_icon = other
 button_text = 
-button_tooltip = Run Command
+button_tooltip = Rofi
 button_lclick_command = rofi -show run
-button_rclick_command = rofi -show window
-button_mclick_command = rofi -show ssh
+button_rclick_command =
+button_mclick_command =
+button_uwheel_command = 
+button_dwheel_command = 
+button_font_color = #000000 100
+button_padding = 0 0
+button_background_id = 0
+button_centered = 0
+button_max_icon_size = 0
+
+#-------------------------------------
+# Button 
+button = new
+button_icon = /usr/share/pixmaps/chromium.png
+button_text = 
+button_tooltip = Chromium
+button_lclick_command = chromium --no-sandbox
+button_rclick_command = 
+button_mclick_command = 
+button_uwheel_command = 
+button_dwheel_command = 
+button_font_color = #000000 100
+button_padding = 0 0
+button_background_id = 0
+button_centered = 0
+button_max_icon_size = 0
+
+#-------------------------------------
+# Button 
+button = new
+button_icon = /usr/share/pixmaps/opera.xpm
+button_text = 
+button_tooltip = Opera
+button_lclick_command = opera --no-sandbox
+button_rclick_command = 
+button_mclick_command = 
 button_uwheel_command = 
 button_dwheel_command = 
 button_font_color = #000000 100
