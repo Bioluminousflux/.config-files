@@ -161,4 +161,8 @@ ${offset 30}${color2}I/O Write:${color} ${alignr}${offset -10}${diskio_write sda
 ${color4}${font}${color}${offset 8}${voffset -12}${color2}Root:${color} ${alignr}${offset -10}${fs_used /} / ${fs_size /}${alignr}${fs_bar}
 ${offset 30}${color2}I/O Read:${color} ${alignr}${offset -10}${diskio_read sda2}${alignr}${diskiograph_read sda2 8,100}
 ${offset 30}${color2}I/O Write:${color} ${alignr}${offset -10}${diskio_write sda2}${alignr}${diskiograph_write sda2 8,100}
+
+${color4}${font}${color}${offset 8}${voffset -12}${color2}Swap:${color} ${alignr}${offset -10}${fs_used swap} / ${fs_size swap}${alignr}${fs_bar}
+${offset 30}${color2}I/O Read:${color} ${alignr}${offset -10}${diskio_read sda3}${alignr}${diskiograph_read sda3 8,100}
+${offset 30}${color2}I/O Write:${color} ${alignr}${offset -10}${diskio_write sda3}${alignr}${diskiograph_write sda3 8,100}
 ]];
