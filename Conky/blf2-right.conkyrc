@@ -28,9 +28,8 @@ conky.config = {
 
 	alignment = 'top_right',						-- top_left,top_middle,top_right,bottom_left,bottom_middle,bottom_right,
 												-- middle_left,middle_middle,middle_right,none
-	--Arch Duoscreen
 	--gap_x = -2600,
-	gap_x = 15,									-- pixels between right or left border
+	gap_x = 0,									-- pixels between right or left border
 	gap_y = 0,									-- pixels between bottom or left border
 	minimum_height = 600,						-- minimum height of window
 	minimum_width = 300,						-- minimum height of window
@@ -78,10 +77,10 @@ conky.config = {
 	own_window_argb_visual = true,				-- use ARGB - composite manager required
 	own_window_class = 'Conky',					-- manually set the WM_CLASS name for use with xprop
 	own_window_colour = '#000000',				-- set colour if own_window_transparent no
-	own_window_hints = 'undecorated,below,above,sticky,skip_taskbar,skip_pager',  -- if own_window true - just hints - own_window_type sets it
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',  -- if own_window true - just hints - own_window_type sets it
 	own_window_transparent = false,				-- if own_window_argb_visual is true sets background opacity 0%
-	own_window_title = 'system_conky',			-- set the name manually  - default conky "hostname"
-	own_window_type = 'override',				-- if own_window true options are: normal/override/dock/desktop/panel
+	own_window_title = 'RightBar_Conky',			-- set the name manually  - default conky "hostname"
+	own_window_type = 'Normal',				-- if own_window true options are: normal/override/dock/desktop/panel
 
 
 	--Colours
@@ -109,9 +108,9 @@ conky.text = [[
 
 ${color5}${font Roboto:size=10}P R O C E S S O R S  ${hr 2}${font}${color}
 
-${color2}${alignr}${execi 1000 cat /proc/cpuinfo | grep 'model name' | sed -e 's/model name.*: //'| uniq}
+${color2}${alignc}${execi 1000 cat /proc/cpuinfo | grep 'model name' | sed -e 's/model name.*: //'| uniq}
 
-${color2}CPU Freq:${color} $alignr${freq}MHz
+${color2}CPU Freq:${color} $alignr${freq} MHz
 ${color2}CPU Temp:${color} $alignr${execi 10 sensors | grep 'Core 0' | awk {'print $3'}}
 ${color2}History:${color} ${alignr}${cpugraph 24,240}
 
@@ -155,7 +154,11 @@ ${voffset 4}     1  -  ${top_mem name 1}${alignr}${goto 170} ${goto 222}${top_me
 
 ${color5}${font Roboto:size=10}D I S K   ${hr 2}${font}${color}
 
+${color4}${font}${color}${offset 8}${voffset -12}${color2}Boot:${color} ${alignr}${offset -10}${fs_used /boot} / ${fs_size /boot}${alignr}${fs_bar}
+${offset 30}${color2}I/O Read:${color} ${alignr}${offset -10}${diskio_read sda1}${alignr}${diskiograph_read sda1 8,100}
+${offset 30}${color2}I/O Write:${color} ${alignr}${offset -10}${diskio_write sda1}${alignr}${diskiograph_write sda1 8,100}
+
 ${color4}${font}${color}${offset 8}${voffset -12}${color2}Root:${color} ${alignr}${offset -10}${fs_used /} / ${fs_size /}${alignr}${fs_bar}
-${offset 30}${color2}I/O Read:${color} ${alignr}${offset -10}${diskio_read /dev/sda2}${alignr}${diskiograph_read sda2 8,100}
-${offset 30}${color2}I/O Write:${color} ${alignr}${offset -10}${diskio_write /dev/sda2}${alignr}${diskiograph_write sda2 8,100}
+${offset 30}${color2}I/O Read:${color} ${alignr}${offset -10}${diskio_read sda2}${alignr}${diskiograph_read sda2 8,100}
+${offset 30}${color2}I/O Write:${color} ${alignr}${offset -10}${diskio_write sda2}${alignr}${diskiograph_write sda2 8,100}
 ]];
