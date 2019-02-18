@@ -30,7 +30,7 @@ conky.config = {
 												-- middle_left,middle_middle,middle_right,none
 	gap_x = 0,									-- pixels between right or left border
 	gap_y = 0,									-- pixels between bottom or left border
-	minimum_height = 600,						-- minimum height of window
+	minimum_height =600,						-- minimum height of window
 	minimum_width = 300,						-- minimum height of window
 
 
@@ -38,7 +38,7 @@ conky.config = {
 
 	border_inner_margin = 10, 					-- margin between border and text
 	border_outer_margin = 5, 					-- margin between border and edge of window
-	border_width = 0, 							-- border width in pixels
+	--border_width = 0, 							-- border width in pixels
 	default_bar_width = 80,					-- default is 0 - full width
 	default_bar_height = 10,					-- default is 6
 	default_gauge_height = 25,					-- default is 25
@@ -109,8 +109,13 @@ ${color5}${font Roboto:size=10}P R O C E S S O R S  ${hr 2}${font}${color}
 
 ${color}${alignc}${execi 1000 cat /proc/cpuinfo | grep 'model name' | sed -e 's/model name.*: //'| uniq}
 
-${color2}CPU Freq:${color} $alignr${freq} MHz
-${color2}CPU Temp:${color} $alignr${execi 10 vcgencmd measure_temp | awk -F= '{print $2}'}
+${color2}CPU Current Freq:${color} $alignr${freq} MHz
+${color2}CPU Temp:${color} $alignr${execi 1 vcgencmd measure_temp | awk -F= '{print $2}'}
+${color2}CPU Voltage:${color} $alignr${execi 1 vcgencmd measure_volts | awk -F= '{print $2}'}
+
+${color2}CPU Min Freq:${color} $alignr${exec lscpu | grep "CPU min MHz:" | awk -F' ' '{print $4}' | awk -F. '{print $1}'} MHz
+${color2}CPU Max Freq:${color} $alignr${exec lscpu | grep "CPU max MHz:" | awk -F' ' '{print $4}' | awk -F. '{print $1}'} MHz
+
 ${color2}History:${color} ${alignr}${cpugraph 24,240}
 
 ${color2}${offset 30}Core 1:${color} ${alignr}${offset -10}${cpu cpu1}%${alignr}${cpubar cpu1}
