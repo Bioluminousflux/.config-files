@@ -1886,7 +1886,7 @@ live_config_reload: true
 shell:
     program: /bin/zsh
 args:
-    - --login
+    -
 
 # Startup directory
 #
@@ -2123,7 +2123,7 @@ debug:
   #   - Info
   #   - Debug
   #   - Trace
-    log_level: Warn
+    log_level: none
 
   # Print all received window events.
     print_events: false 
