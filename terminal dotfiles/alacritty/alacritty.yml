@@ -2123,7 +2123,7 @@ debug:
   #   - Info
   #   - Debug
   #   - Trace
-    log_level: none
+    log_level: OFF
 
   # Print all received window events.
     print_events: false 
